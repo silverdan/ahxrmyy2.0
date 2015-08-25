@@ -10,6 +10,7 @@ namespace DTcms.Web.Plugin.Feedback
     {
         protected int page; //当前页码
         protected int totalcount; //OUT数据总数
+        protected string channel = "";
         /// <summary>
         /// 重写虚方法,此方法将在Init事件前执行
         /// </summary>

@@ -32,10 +32,10 @@
                 <div class="site_nav news_nav">首页 > {model.title}</div>
                 <div class="news_list">
               <ul >
-                <%set DataTable newsList=get_article_list(channel, category_id, pagesize, page, "status=0", out totalcount, out pagelist, "news_list", category_id, "__id__")%> 
+                <%set DataTable newsList=get_article_list(channel, category_id, pagesize, page, "status=0", out totalcount, out pagelist, channel+"_list", category_id, "__id__")%> 
                 <%foreach(DataRow dr in newsList.Rows)%>
                 <li><em>{dr[add_time]}</em>
-                  <a href="<%linkurl("news_show",{dr[id]})%>">{dr[title]}</a>
+                  <a href="<%linkurl(channel+"_show",{dr[id]})%>">{dr[title]}</a>
                   <!--<div class="note">
                     <%if({dr[img_url]}!="")%>
                     <b><img src="{dr[img_url]}" /></b>

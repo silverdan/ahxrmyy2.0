@@ -214,6 +214,8 @@
     <Content Include="aspx\main\down_list.aspx" />
     <Content Include="aspx\main\down_show.aspx" />
     <Content Include="aspx\main\error.aspx" />
+    <Content Include="aspx\main\experts_list.aspx" />
+    <Content Include="aspx\main\experts_show.aspx" />
     <Content Include="aspx\main\goods.aspx" />
     <Content Include="aspx\main\goods_list.aspx" />
     <Content Include="aspx\main\goods_show.aspx" />
@@ -291,8 +293,11 @@
     <Content Include="aspx\mobile\video_list.aspx" />
     <Content Include="aspx\mobile\video_show.aspx" />
     <Content Include="aspx\plugin\feedback.aspx" />
+    <Content Include="aspx\plugin\feedback2.aspx" />
     <Content Include="aspx\plugin\link.aspx" />
+    <Content Include="aspx\plugin\link2.aspx" />
     <Content Include="aspx\plugin\mfeedback.aspx" />
+    <Content Include="aspx\plugin\mfeedback2.aspx" />
     <Content Include="crossdomain.xml" />
     <Content Include="css\image1.gif" />
     <Content Include="css\image2.gif" />

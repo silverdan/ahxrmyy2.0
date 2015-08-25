@@ -10,7 +10,7 @@
                         <%/if%>
                             <span>{cdr1[content]}</span>
                             <%if({cdr1[link_url]}=={""})%>
-                            <a href="<%linkurl("survey",{cdr1[id]})%>">
+                            <a href="<%linkurl(channel+"_list",{cdr1[id]})%>">
                             <%else%>
                             <!--
                             	
@@ -18,7 +18,7 @@
                             	时间：2015-08-19
                             	描述： 本栏目内容页只需存储id使用<a href="<%linkurl("survey_show",{cdr1[link_url]})%>"> 否则存储完整URL:<a href="{cdr1[link_url]}">
                             -->
-                             <a href="<%linkurl("survey_show",{cdr1[link_url]})%>">
+                             <a href="<%linkurl(channel+"_show",{cdr1[link_url]})%>">
                             <%/if%>	
                             	{cdr1[title]}</a>
                         </li>

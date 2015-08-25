@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/5/3 14:45:05.
-		本页面代码由DTcms模板引擎生成于 2015/5/3 14:45:05. 
+		This page was created by DTcms Template Engine at 2015/8/25 17:05:50.
+		本页面代码由DTcms模板引擎生成于 2015/8/25 17:05:50. 
 	*/
 
 	base.OnInit(e);
@@ -106,6 +106,9 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(linkurl("goods"));
 
 	templateBuilder.Append("\" class=\"icon basket\" data-ignore=\"true\">购物商城</a></li>\r\n        <li><a href=\"");
+	templateBuilder.Append(linkurl("video"));
+
+	templateBuilder.Append("\" class=\"icon camera\" data-ignore=\"true\">视频专区</a></li>\r\n        <li><a href=\"");
 	templateBuilder.Append(linkurl("photo"));
 
 	templateBuilder.Append("\" class=\"icon picture\" data-ignore=\"true\">图片分享</a></li>\r\n        <li><a href=\"");
@@ -117,7 +120,7 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("\" class=\"icon user\" data-ignore=\"true\">会员中心</a></li>\r\n        <li><a href=\"");
 	templateBuilder.Append(linkurl("content","about"));
 
-	templateBuilder.Append("\" class=\"icon phone\" data-ignore=\"true\">关于我们</a></li>\r\n        <li><a href=\"");
+	templateBuilder.Append("\" class=\"icon info\" data-ignore=\"true\">关于我们</a></li>\r\n        <li><a href=\"");
 	templateBuilder.Append(linkurl("mfeedback"));
 
 	templateBuilder.Append("\" class=\"icon message\" data-ignore=\"true\">在线留言</a></li>\r\n        <li><a href=\"");

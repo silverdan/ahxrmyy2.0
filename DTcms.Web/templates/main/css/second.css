@@ -274,15 +274,15 @@ OL.ImagesItem li {	POSITION: absolute; WIDTH:423px; display:none; HEIGHT: 225px;
   .mob_ks03 ul span.sty01{ top:10px;}
   .mob_ks03 ul span.sty02{ bottom:35px;}
 .Doctors{ position:relative; margin-bottom:5px;}
-  .Doctors ul{ padding:10px 0; height:220px; position:relative;}
+  .Doctors ul{ padding:10px 0;  position:relative;}
   .Doctors ul li{ float:left; width:114px; height:200px; margin-right:15px; text-align:center}
   .Doctors ul li img{ margin-bottom:5px; width:114px; height:171px; display:block;}
   .Doctors ul li a{color:#666;}
   .Doctors span.sty01,.Doctors span.sty02{ width:26px; height:73px; position:absolute; right:0;}
   .Doctors span.sty01{ top:40px;}
   .Doctors span.sty02{ bottom:35px;}
-div.DoctorsPoint{position:relative;width:645px;height:200px;overflow:hidden;display:block;}
-div#DoctorsList {position:absolute;top:0px;	left:0px;width:20000px;height:200px;	overflow:hidden;}
+div.DoctorsPoint{position:relative;overflow:hidden;display:block;}
+div#DoctorsList {position:relative;top:0px;	left:0px;	overflow:hidden;}
 .mob_ks04{}
   .mob_ks04 h3 a{color:#525252;}
   .mob_ks04 h3.active a{color:#FFF}
