@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{get_channel(channel).title}  - {site.name}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/second.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$(".focusbox").flexslider({
+		directionNav: false,
+		pauseOnAction: false
+	});
+});
+</script>
+</head>
+
+<body>
+	<div class="wrap">
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+ <!--content begin-->
+  <div class="content mob_ks">
+    <div class="left ks_left">
+      <h3>{get_channel(channel).title}</h3>
+      <h4>Department of Neurology<br />Elderly</h4>
+      <div class="ks_listL">
+        <h5><img src="<%templateskin%>/images/pic_kstel.jpg" width="167" height="61" alt="医院总机" title="医院总机" /><br /><a href="Telephone.aspx"><em>按步骤精确查找号码</em></a></h5>
+        <ul><!--此处显示教学科研的子栏目标题列表-->
+           <%set DataTable categoryList1=get_category_child_list(channel, 0)%>
+	    <%foreach(DataRow cdr1 in categoryList1.Rows)%>
+	        <li><a href="<%linkurl({channel+"_list"},{cdr1[id]})%>">{cdr1[title]}</a></li>
+	    <%/foreach%>
+        </ul>
+      </div>        
+    </div>
+    <div class="right mob_right science">
+      <div class="site_nav">首页 > {get_channel(channel).title}</div>
+     <div class="scroller">        
+         <div class="scrollerInner">
+          <ol class="ImagesItem">
+          
+          <li style="display: block"><a href="javascript:void(0)" ><img  src="<%templateskin%>/images/2013022711092714.jpg" width="401" height="225" alt="安化县人民医院-科研教学栏目" title="安化县人民医院-科研教学栏目" /></a></li>        
+          
+          <li><a href="javascript:void(0)" ><img  src="/uploadfiles/thumb/2013022711080397.jpg" width="401" height="225" alt="安化县人民医院-科研教学栏目" title="安化县人民医院-科研教学栏目" /></a></li>        
+          
+          </ol>
+        </div>
+        <div class="scrollerHeader">
+            <div class="scrollerIndex">
+            <ol>
+                <li><a class="on"  href="javascript:void(0)">1</a></li>
+                
+                <li><a   href="javascript:void(0)">2</a></li>
+                </ol></div>
+                <div class="IndexContent" ><ol>
+                <li>安化县人民医院-科研教学栏目</li><li>安化县人民医院-科研教学栏目</li></ol></div>
+        </div>
+      </div>
+      
+    <!--分类资讯-->
+       <div class="mob_ks07 ky_list">
+        <h3 id="CTitle">{model.title}<em></em></h3>
+        <dl>
+          <dt></dt>
+          <dd>
+            <ul>
+            	<%set DataTable classList=get_article_list(channel, category_id, 15, page, "status=0", out totalcount, out pagelist, channel+"_list", category_id, "__id__")%> 
+                <%foreach(DataRow classdr in classList.Rows)%>
+                <li><span><%datetostr({classdr[add_time]},MM-dd)%></span><a target="_blank"  href="<%linkurl(channel+"_show",{classdr[id]})%>">{classdr[title]}</a></li>
+                <%/foreach%>
+            </ul>
+            <div class="page_mob02">
+
+<!-- AspNetPager 7.3.2  Copyright:2003-2010 Webdiyer (www.webdiyer.com) -->
+<div id="anpNews">
+<a disabled="disabled" style="margin-right:5px;">首页</a><a disabled="disabled" style="margin-right:5px;">上一页</a><span class="cpd" style="margin-right:5px;">1</span><a href="scientific_list.aspx?id=16&page=2" style="margin-right:5px;">2</a><a href="scientific_list.aspx?id=16&page=2" style="margin-right:5px;">下一页</a><a href="scientific_list.aspx?id=16&page=2" style="margin-right:5px;">尾页</a>
+</div>
+<!-- AspNetPager 7.3.2  Copyright:2003-2010 Webdiyer (www.webdiyer.com) -->
+
+
+            </div>
+          </dd>
+        </dl>
+      </div>
+      
+	<!--分类资讯-->
+    </div>
+  </div>
+<!--content end-->
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</div>
+</body>
+</html>

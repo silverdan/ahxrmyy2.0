@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{get_channel(channel).title} - {site.name}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/second.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$(".focusbox").flexslider({
+		directionNav: false,
+		pauseOnAction: false
+	});
+});
+</script>
+</head>
+
+<body>
+	<div class="wrap">
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+ <!--content begin-->
+  <div class="content work">
+    <div class="banner02"><img src="<%templateskin%>/images/banner_02.jpg" width="918" height="226" alt="党群工作" title="党群工作" /></div>
+     
+       <div class="mob_work work_list">
+      <h3 id="tempH3"><span><a href="work.aspx">更多>></a></span>党务管理</h3>
+      <ul>
+           <%set DataTable newsList=get_article_list(channel, category_id, pagesize, page, "status=0", out totalcount, out pagelist, channel+"_list", category_id, "__id__")%>
+        	<%loop dr2 newsList%>
+                <li><span><%datetostr({dr2[add_time]},MM-dd)%></span><a target="_blank"  href="<%linkurl(channel+"_show",{dr2[id]})%>">{dr2[title]}</a></li>
+            <%/loop%>
+          </ul>
+      <div class="page_mob02">
+     
+     
+  </div>
+  <!--content end-->
+  <div class="clear"></div>
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</div>
+</body>
+</html>

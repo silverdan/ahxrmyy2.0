@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{site.seo_title}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<!--<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />-->
+    <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/imgReady.js"></script>
+    <script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/index.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".focusbox").flexslider({
+		directionNav: false,
+		pauseOnAction: false
+	});
+});
+</script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--Header-->
+        <%template src="_header.html"%>
+        <!--/Header-->
+
+        <div class="content">
+            <div class="left">
+            <!--快速导航-->
+        		<%template src="_indexQNav.html"%>
+        	<!--/快速导航-->
+                <div class="sy_360">
+                    <h3><span><a href="distribution.aspx" target="_blank"><img src="<%templateskin%>/images/btn_02right.png" width="11" height="10" alt="旋转" title="旋转" /></a></span>人医微信号</h3>
+                    <dl>
+                        <dt>
+                            <a href="distribution.aspx" target="_blank"><img onmouseover="this.src = '<%templateskin%>/images/pic_360a.jpg'" onmouseout="    this.src = '<%templateskin%>/images/pic_360.jpg'" src="images/pic_360.jpg" width="96" height="97" alt="360度" title="360度" /></a>
+                        </dt>
+                        <dd class="til">使用说明 &nbsp;&nbsp; <img src="images/btn_02right.png" width="11" height="10" alt="切换" /></dd>
+                        <dd>通过鼠标横向拖拽，实现角度切换，可点击每个楼层查看详细。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="right">
+                <div class="banner">
+                    <div class="AdvertBox">
+                        <div><a href="javascript:void(0)"><img src="<%templateskin%>/images/banner_index.jpg" id="result_banner" width="638" height="302" alt="安化县人民医院" /></a></div>
+                        <div class="Advert_time">还剩<span id="Advert_span">6</span>秒</div>
+                    </div>
+                    <div id="IndexImagesContent">
+                        <ul>
+                        <%set DataTable focusNewsflash=get_article_list("news", 0, 6, "status=0 and is_slide=1 and img_url<>''")%>
+							<%foreach(DataRow dr in focusNewsflash.Rows)%>
+							<li>
+                            <a href="<%linkurl("news_show",{dr[id]})%>" target="_blank"><img src="{dr[img_url]}" width="638" height="302" alt="{dr[title]}" title="{dr[title]}" /></a>
+                            <div class="pic_hover"><p>{dr[title]}</p></div>
+                            </li>
+                            <%/foreach%>
+                        </ul>
+                    </div>
+                    <div id="IndexImages" style="top:10px;height:188px;">
+						<%foreach(DataRow dr in focusNewsflash.Rows)%>
+                        <a href="javascript:void(0)"><img src="<%templateskin%>/images/ico_04.gif" width="17" height="17" alt="{dr[title]}" /> </a>
+						<%/foreach%>
+                    </div>
+                    <div id="loader"><img src="<%templateskin%>/image/loading.gif" width="16px" height="16px" /></div>
+                </div>
+                <div>
+                    <!--选项卡 begin-->
+                    <div class="bd" id="n1Tab">
+                        <div class="Tabtitle">
+                            <h3 class="nTabs active"><a href="news.aspx" target="_blank">人医快讯<em>Hospital News</em></a></h3>
+                            <h3 class="nTabs"><a href="Notice.aspx" target="_blank">最新公告<em>Bulletin</em></a></h3>
+                            <h3 class="nTabs">官方微博<em>WeiBo</em></h3>
+                        </div>
+                        <div class="TabContent">
+                        	<!--快讯公告-->
+                            <div id="n1Tab_Content0" class="n1Tab_Content">
+                            	<%set DataTable focusNews=get_article_list("news", 0, 1, "status=0 and is_slide=1 and img_url<>''")%>
+								        <%foreach(DataRow dr in focusNews.Rows)%>
+                                <div class="sy_news">
+                                    <h4><a href="<%linkurl("news_show",{dr[id]})%>" id="a_FirstTitle" target="_blank">{dr[title]}...</a></h4>
+                                    <p id="p_FirstContent" target="_blank">{dr[zhaiyao]}...</p>
+                                </div>
+                                <div class="sy_pic01">
+                                    <h5><img src="{dr[img_url]}" width="130" height="81" alt="相关文字介绍" /></h5>
+                                    <p></p>
+                                </div>
+                                <%/foreach%>
+                                <div class="sy_newsr">
+                                    <ul>
+							  <%set DataTable newsList=get_article_list("news", 0, 6, "status=0")%>
+							        <%loop newdr newsList%>
+							        <li>
+							        	<em><%datetostr({newdr[add_time]},MM-dd)%></em>
+							        	<a target="_blank" href="<%linkurl("news_show",{newdr[id]})%>" title="{newdr[title]}">{newdr[title]}</a>
+							        </li>
+							        <%/loop%>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--最新公告-->
+                            <div id="n1Tab_Content1" class="n1Tab_Content">
+                                <div class="sy_newsr synews2">
+                                    <ul>
+                            <%set DataTable newsListno=get_article_list("news", 0, 12, "status=0")%>
+							        <%loop newdrno newsListno%>
+							        <li>
+							        	<em><%datetostr({newdrno[add_time]},MM-dd)%></em>
+							        	<a target="_blank" href="<%linkurl("news_show",{newdrno[id]})%>" title="{newdrno[title]}">{newdrno[title]}</a>
+							        </li>
+							        <%/loop%>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="n1Tab_Content2" class="n1Tab_Content">
+                                <ul class="list_top" id="weiboShare"></ul>
+                            </div>
+                        </div>
+                    </div><!--选项卡 end-->
+                </div>
+                <div class="doctors">
+                    <h3><span><a href="visit_nav.aspx">科室与医生</a></span><span class="style1">Department & Doctors</span></h3>
+                    <ul id="Offices">
+
+                        <li><a target="_blank" href="visit_office.aspx?id=24">泌尿外科</a></li>
+
+                        <li><a target="_blank" href="visit_office.aspx?id=6">肾病风湿免疫科</a></li>
+
+                        <li class="sty01"><a target="_blank" href="visit_office.aspx?id=57">神经内科康馨病房</a></li>
+
+                        <li><a target="_blank" href="visit_office.aspx?id=12">神经内科</a></li>
+
+                        <li><a target="_blank" href="visit_office.aspx?id=13">消化内科</a></li>
+
+                        <li class="sty01"><a target="_blank" href="visit_office.aspx?id=30">河南省立眼科医院</a></li>
+
+                        <li class="sty01"><a target="_blank" href="visit_office.aspx?id=2">过敏反应科（变态反应科）</a></li>
+
+                        <li><a target="_blank" href="visit_office.aspx?id=40">整形美容外科</a></li>
+
+                    </ul>
+                    <div id="doctorsLoader"><img src="image/loading.gif" width="16px" height="16px" /></div>
+                    <span class="btn_doc">
+                        <a href="javascript:bindRandomOffices()"><img src="images/btn_02right.png" width="11" height="10" alt="切换" /></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--content end-->
+        <div class="clear"></div>
+        <script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/index.js"></script>
+        <!--Footer-->
+        <%template src="_footer.html"%>
+        <!--/Footer-->
+    </div></body>
+</html>

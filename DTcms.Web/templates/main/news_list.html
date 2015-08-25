@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{model.title} - {site.name}</title>
+<meta name="keywords" content="{model.seo_keywords}" />
+<meta name="description" content="{model.seo_description}" />
+<link href="{config.webpath}css/pagination.css" rel="stylesheet" />
+<!--<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />-->
+    <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/second.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/imgReady.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--Header-->
+        <%template src="_header.html"%>
+        <!--/Header-->
+        <!--content begin-->
+        <div class="content">
+            <div class="left infor_left news_bj">
+                <!--新闻左侧导航-->
+		        <%template src="_newsLeftNav.html"%>
+		        <!--/新闻左侧导航-->
+                <div class="hospital_link"></div>
+            </div>
+            <div class="center news_center">
+                <div class="site_nav news_nav">首页 > {model.title}</div>
+                <div class="news_list">
+              <ul >
+                <%set DataTable newsList=get_article_list(channel, category_id, pagesize, page, "status=0", out totalcount, out pagelist, "news_list", category_id, "__id__")%> 
+                <%foreach(DataRow dr in newsList.Rows)%>
+                <li><em>{dr[add_time]}</em>
+                  <a href="<%linkurl("news_show",{dr[id]})%>">{dr[title]}</a>
+                  <!--<div class="note">
+                    <%if({dr[img_url]}!="")%>
+                    <b><img src="{dr[img_url]}" /></b>
+                    <%/if%>
+                    <p>{dr[zhaiyao]}</p>
+                    <div class="info">
+                      <span class="time"></span>
+                      <span class="comm"><script type="text/javascript" src="{config.webpath}tools/submit_ajax.ashx?action=view_comment_count&id={dr[id]}"></script>人评论</span>
+                      <span class="view"><script type="text/javascript" src="{config.webpath}tools/submit_ajax.ashx?action=view_article_click&id={dr[id]}"></script>次浏览</span>
+                    </div>-->
+                </li>
+                <%/foreach%>
+              </ul> 
+                </div>
+                <div class="page_mob02">
+                    <!--页码列表-->
+                    <div id="anpNews">
+                        <div class="digg">{pagelist}</div>
+                    </div> 
+                    <!--/页码列表-->
+                </div>
+            </div>
+            <div class="right news_right">
+                <img src="<%templateskin%>/images/bj_news03.jpg" width="163" height="402" alt="相关文字描述" title="相关文字描述" />
+            </div>
+        </div>
+        <!--content end-->
+        <div class="clear"></div>
+        <!--Footer-->
+        <%template src="_footer.html"%>
+        <!--/Footer-->
+        <!--quick nav start-->
+        <%template src="_quick_nav.html"%>
+        <!--quick nav end-->
+    </div></body>
+</html>

@@ -1,0 +1,29 @@
+﻿<div class="left">
+                <div class="survey_left">
+                    <ul>      
+                        <%set DataTable categoryList1=get_category_child_list(channel, 0)%>
+                        <%foreach(DataRow cdr1 in categoryList1.Rows)%>
+                        <%if({strtoint({cdr1[id]})}=={category_id})%>
+                        <li class="on">
+                        <%else%>
+                        <li> 
+                        <%/if%>
+                            <span>{cdr1[content]}</span>
+                            <%if({cdr1[link_url]}=={""})%>
+                            <a href="<%linkurl("survey",{cdr1[id]})%>">
+                            <%else%>
+                            <!--
+                            	
+                            	作者：dan0627@gmail.com
+                            	时间：2015-08-19
+                            	描述： 本栏目内容页只需存储id使用<a href="<%linkurl("survey_show",{cdr1[link_url]})%>"> 否则存储完整URL:<a href="{cdr1[link_url]}">
+                            -->
+                             <a href="<%linkurl("survey_show",{cdr1[link_url]})%>">
+                            <%/if%>	
+                            	{cdr1[title]}</a>
+                        </li>
+                        <%/foreach%>
+                    </ul>
+                </div>
+     <div class="hospital_link link_sur"></div>
+</div>

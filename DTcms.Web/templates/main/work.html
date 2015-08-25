@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{get_channel(channel).title} - {site.name}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/second.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$(".focusbox").flexslider({
+		directionNav: false,
+		pauseOnAction: false
+	});
+});
+</script>
+</head>
+
+<body>
+	<div class="wrap">
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+ <!--content begin-->
+  <div class="content work">
+    <div class="banner02"><img src="<%templateskin%>/images/banner_02.jpg" width="918" height="226" alt="党群工作" title="党群工作" /></div>
+    <div class="left">
+      <div class="work_pic">
+
+          <ul id="work_picBody">
+              
+              <li class="selected"><a href="javascript:void(0)"><img src="/uploadfiles/thumb/2014120115444237.jpg" onerror="this.src='images/nophoto.gif'" width="380" height="239" alt="百年省医" title="百年省医" /></a></li>
+              
+          </ul>
+          <ul id="work_picIndex">
+             
+             <li class="selected"</li>
+          </ul>                            
+      </div>
+      <div class="work_news">
+        <h3><span><a href="<%linkurl(channel+"_list",92)%>">更多>></a></span>工作动态</h3>
+        <ul>
+        	<%set DataTable hotList=get_article_list(channel, 92, 6, "status=0")%>
+        	<%loop dr2 hotList%>
+                <li><span><%datetostr({dr2[add_time]},MM-dd)%></span><a target="_blank"  href="<%linkurl(channel+"_show",{dr2[id]})%>">{dr2[title]}</a></li>
+            <%/loop%>  
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+          <div class="work_mob">
+        <h3><span><a href="<%linkurl(channel+"_list",89)%>">更多>></a></span>党务管理</h3>
+        <dl>
+          <dt><a href="javascript:void(0)" id="AUrl6" target="_blank"><img src="/uploadfiles/thumb/2012122617040392.jpg" id="ImgNews6" width="110" height="80" /></a></dt>
+            
+               <dd><span>2013-02-18</span><a href="work_detail.aspx?id=3446">组织关系转接流程图</a></dd>
+              
+               <dd><span>2013-02-18</span><a href="work_detail.aspx?id=3445">发展党员工作程序</a></dd>
+              
+               <dd><span>2012-12-17</span><a href="work_detail.aspx?id=316">院内党组织机构设置图</a></dd>
+              
+
+        </dl>
+      </div>
+      <div class="work_mob">
+        <h3><span><a href="work_list.aspx?id=32">更多>></a></span>党风廉政</h3>
+        <dl>
+          <dt><a href="javascript:void(0)" id="AUrl1" target="_blank"><img src="/uploadfiles/thumb/2012122617030439.jpg" id="ImgNews1" width="110" height="80" /></a></dt>
+           
+                <dd><span>2015-08-19</span><a href="work_detail.aspx?id=7167">省纪委8月11日再次通报六起涉医领域腐败典型案件</a></dd>
+              
+                <dd><span>2015-08-13</span><a href="work_detail.aspx?id=7144">河南省纪委监察厅预防腐败局网站公布《安阳市纪委通报五起涉医领域典型案件》</a></dd>
+              
+                <dd><span>2015-07-15</span><a href="work_detail.aspx?id=7120">河南省纪检监察系统召开“三严三实”专题教育会议----尹晋华做专题报告</a></dd>
+              
+                <dd><span>2015-07-15</span><a href="work_detail.aspx?id=7119">河南省委常委 省纪委书记尹晋华接受中央纪委网站访谈---把严明纪律体现在日常管理监督中</a></dd>
+              
+                <dd><span>2015-05-19</span><a href="work_detail.aspx?id=7014">王岐山在浙江省调研时强调唤醒党章党规意识 推进制度创新</a></dd>
+              
+        </dl>
+      </div>
+      <div class="work_mob">
+        <h3><span><a href="work_list.aspx?id=34">更多>></a></span>职工之家</h3>
+        <dl>
+          <dt><a href="javascript:void(0)" id="AUrl2" target="_blank" title="2013年12月14日，我院200多名未婚员工，参加了省直工会、河南日报报业集团举办的《升值鹊桥2013年大型相亲大会》"><img src="/uploadfiles/thumb/2013123008453615.jpg" id="ImgNews2" width="110" height="80" alt="2013年12月14日，我院200多名未婚员工，参加了省直工会、河南日报报业集团举办的《升值鹊桥2013年大型相亲大会》" /></a></dt>
+            
+                <dd><span>2015-08-03</span><a href="work_detail.aspx?id=7141">全总下发《关于学习宣传贯彻中央党的群团工作会议精神的通知》</a></dd>
+              
+                <dd><span>2015-04-01</span><a href="work_detail.aspx?id=6880">庆“三八”活动——趣味运动会</a></dd>
+              
+                <dd><span>2015-03-30</span><a href="work_detail.aspx?id=6878">2014年度总结表彰大会暨2015年春节联谊会</a></dd>
+              
+                <dd><span>2013-06-03</span><a href="work_detail.aspx?id=4322">我院2013年春节联欢会顺利举行</a></dd>
+              
+                <dd><span>2013-02-25</span><a href="work_detail.aspx?id=885">女职工劳动保护规定</a></dd>
+              
+        </dl>
+      </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="mob_work">
+      <h4><span><a href="work_list.aspx?id=36">更多>></a></span>青年园地</h4>
+      <dl>
+        <dt><a href="javascript:void(0)" id="AUrl5" target="_blank"><img src="/uploadfiles/thumb/2012122617044837.jpg" id="ImgNews5" width="110" height="80" /></a></dt>
+            
+                <dd><span>2015-06-04</span><a href="work_detail.aspx?id=7078">我院青年工作再结硕果</a></dd>
+              
+                <dd><span>2015-06-01</span><a href="work_detail.aspx?id=7065">青年志愿活动走进经纬花园社区送健康</a></dd>
+              
+                <dd><span>2015-05-05</span><a href="work_detail.aspx?id=6996">庆五四 送健康 青年志愿者在行动</a></dd>
+              
+                <dd><span>2015-04-24</span><a href="work_detail.aspx?id=6993">汇聚青春能量 我为省医添彩——我院举行纪念五四运动96周年暨第七届“十佳青年”表彰大会</a></dd>
+              
+      </dl>
+    </div>
+    <div class="mob_work">
+      <h4><span><a href="work_list.aspx?id=37">更多>></a></span>统战工作</h4>
+      <dl>
+        <dt><a href="javascript:void(0)" id="AUrl3" target="_blank"><img src="/uploadfiles/thumb/2012122617053383.jpg" id="ImgNews3" width="110" height="80" /></a></dt>
+        
+            <dd><span>2015-02-13</span><a href="work_detail.aspx?id=6914">努力搭建平台 不断开拓创新--我院召开民主党派、中青年骨干座谈会</a></dd>
+          
+      </dl>
+    </div>
+    <div class="mob_work mr0">
+      <h4><span><a href="work_list.aspx?id=35">更多>></a></span>夕阳红</h4>
+      <dl>
+        <dt><a href="javascript:void(0)" id="AUrl4" target="_blank"><img src="/uploadfiles/thumb/2012122617042451.jpg" id="ImgNews4" width="110" height="80" /></a></dt>
+            
+                <dd><span>2015-08-04</span><a href="work_detail.aspx?id=7142">志愿服务展风采</a></dd>
+              
+                <dd><span>2015-07-02</span><a href="work_detail.aspx?id=7098">我院离退休老党员代表参加医院庆祝建党94周年暨表彰大会</a></dd>
+              
+                <dd><span>2015-06-03</span><a href="work_detail.aspx?id=7052">离退休职工服务处组织老同志外出参观</a></dd>
+              
+                <dd><span>2015-06-03</span><a href="work_detail.aspx?id=7051">老年大学优秀学员</a></dd>
+              
+      </dl>
+    </div>
+  </div>
+  <!--content end-->
+  <div class="clear"></div>
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</div>
+</body>
+</html>
