@@ -6,7 +6,9 @@
         <a href="javascript:void(0)" onclick="addToFavorite()">加入收藏</a> | 
         <a href="#" target="_blank">人事管理</a> |  
         <a href="#" target="_blank">内部OA</a>  </span>
-    </h2><input type="text" class="search" name="tbSearch" id="tbSearch" value="" onkeypress="if(event.keyCode==13){document.all.btnSearch.click();return false;}" /><input type="button" class="btn_search" name="btnSearch" id="btnSearch" value="搜 索" onclick="SearchWords()" />
+    </h2>
+    <input type="text" class="search" name="tbSearch" id="tbSearch" value="" onkeypress="if(event.keyCode==13){document.all.btnSearch.click();return false;}" placeholder="输入回车搜索" x-webkit-speech=""  />
+    <input type="button" class="btn_search" name="btnSearch" id="btnSearch" value="搜 索" onclick="SearchWords()" />
     <ul>
 
     <li onclick="self.location='<%linkurl("index")%>'" style="cursor:pointer;"

@@ -231,7 +231,7 @@ function GetTimesByYear(obj)
 function SearchWords()
 {
 if($.trim($("#tbSearch").val())!=""){
-   window.location.href="Search.aspx?wd="+$("#tbSearch").val();
+   window.location.href="Search.aspx?keyword="+$("#tbSearch").val();
 }
 else{
    alert("搜索内容不能为空！");

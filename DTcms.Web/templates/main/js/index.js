@@ -50,10 +50,10 @@ function bindRandomOffices() {
 }
 function SearchWords() {
 	if ($("#tbSearch").val() != "") {
-		window.location.href = "Search.aspx?wd=" + $("#tbSearch").val();
+		window.location.href = "Search.aspx?keyword=" + $("#tbSearch").val();
 	}
 	else {
-		alert("搜索内容部能为空！");
+		alert("搜索内容不能为空！");
 	}
 
 }

@@ -52,7 +52,11 @@ namespace DTcms.Web.UI.Page
             {
                 ds = new BLL.article().GetSearch(channel, _pagesize, page, "(title like '%" + keyword + "%' or zhaiyao like '%" + keyword + "%')", "add_time desc,id desc", out _totalcount);
             }
-            if (ds.Tables[0].Rows.Count > 0)
+            else
+            {
+                _totalcount = 0;
+            }
+            if (ds.Tables.Count >0 && ds.Tables[0].Rows.Count > 0)
             {
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
