@@ -48,7 +48,7 @@ namespace DTcms.Web.UI.Page
             {
                 ds = new BLL.article().GetSearch(channel, tags, _pagesize, page, string.Empty, "add_time desc,id desc", out _totalcount);
             }
-            else
+            else if (!string.IsNullOrEmpty(keyword))
             {
                 ds = new BLL.article().GetSearch(channel, _pagesize, page, "(title like '%" + keyword + "%' or zhaiyao like '%" + keyword + "%')", "add_time desc,id desc", out _totalcount);
             }
