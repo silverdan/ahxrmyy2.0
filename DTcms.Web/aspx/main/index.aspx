@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/25 16:30:29.
-		本页面代码由DTcms模板引擎生成于 2015/8/25 16:30:29. 
+		This page was created by DTcms Template Engine at 2015/8/26 9:57:32.
+		本页面代码由DTcms模板引擎生成于 2015/8/26 9:57:32. 
 	*/
 
 	base.OnInit(e);
@@ -189,11 +189,17 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav008.png\" width=\"42\" height=\"42\" alt=\"信息查询\" title=\"信息查询\" /></a></dt>\r\n                            <dd class=\"til\"><a href=\"infor_retrieval.aspx\" target=\"_blank\">信息查询</a></dd>\r\n                            <dd class=\"cont\">按查询词条首位字母快速索引相关查询结果，同时支持关键字模糊查询。</dd>\r\n                            <dd class=\"btn\"><a href=\"infor_retrieval.aspx\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/btn_01.jpg\" width=\"74\" height=\"23\" alt=\"查看更多\" title=\"查看更多\" /></a></dd>\r\n                        </dl>\r\n                    </div>\r\n                    <div class=\"quick_nav\">\r\n                        <ul>\r\n                            <li><a href=\"Treatment.html\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/btn_01.jpg\" width=\"74\" height=\"23\" alt=\"查看更多\" title=\"查看更多\" /></a></dd>\r\n                        </dl>\r\n                    </div>\r\n                    <div class=\"quick_nav\">\r\n                        <ul>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("treatment_list",52));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav001b.png\" width=\"54\" height=\"54\" alt=\"就诊指南\" title=\"就诊指南\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav001.png\" width=\"54\" height=\"54\" alt=\"就诊指南\" title=\"就诊指南\" /><p>就诊指南</p></a></li>\r\n                            <li> <a href=\"visit_nav.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav001.png\" width=\"54\" height=\"54\" alt=\"就诊指南\" title=\"就诊指南\" /><p>就诊指南</p></a></li>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("experts_list"));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav002b.png\" width=\"54\" height=\"54\" alt=\"科室导航\" title=\"科室导航\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
@@ -201,7 +207,7 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav003b.png\" width=\"54\" height=\"54\" alt=\"人医地图\" title=\"人医地图\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav003.png\" width=\"54\" height=\"54\" alt=\"人医地图\" title=\"人医地图\" /><p>人医地图</p></a></li>\r\n                            <li><a href=\"time.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav003.png\" width=\"54\" height=\"54\" alt=\"人医地图\" title=\"人医地图\" /><p>人医地图</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav004b.png\" width=\"54\" height=\"54\" alt=\"出诊安排\" title=\"出诊安排\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
@@ -209,15 +215,15 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav005b.png\" width=\"54\" height=\"54\" alt=\"预约挂号\" title=\"预约挂号\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav005.png\" width=\"54\" height=\"54\" alt=\"预约挂号\" title=\"预约挂号\" /><p>预约挂号</p></a></li>\r\n                            <li><a href=\"Route.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav005.png\" width=\"54\" height=\"54\" alt=\"预约挂号\" title=\"预约挂号\" /><p>预约挂号</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav006b.png\" width=\"54\" height=\"54\" alt=\"来院路线\" title=\"来院路线\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav006.png\" width=\"54\" height=\"54\" alt=\"来院路线\" title=\"来院路线\" /><p>来院路线</p></a></li>\r\n                            <li><a href=\"Telephone.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav006.png\" width=\"54\" height=\"54\" alt=\"来院路线\" title=\"来院路线\" /><p>来院路线</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav007b.png\" width=\"54\" height=\"54\" alt=\"电话查询\" title=\"电话查询\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav007.png\" width=\"54\" height=\"54\" alt=\"电话查询\" title=\"电话查询\" /><p>电话查询</p></a></li>\r\n                            <li><a href=\"infor_retrieval.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav007.png\" width=\"54\" height=\"54\" alt=\"电话查询\" title=\"电话查询\" /><p>电话查询</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav008b.png\" width=\"54\" height=\"54\" alt=\"信息查询\" title=\"信息查询\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
@@ -225,15 +231,21 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav009b.png\" width=\"54\" height=\"54\" alt=\"人医微博\" title=\"人医微博\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav009.png\" width=\"54\" height=\"54\" alt=\"医生微博\" title=\"医生微博\" /><p>人医微博</p></a></li>\r\n                            <li><a href=\"Site_Map.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav009.png\" width=\"54\" height=\"54\" alt=\"医生微博\" title=\"医生微博\" /><p>人医微博</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav010b.png\" width=\"54\" height=\"54\" alt=\"站点地图\" title=\"站点地图\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav010.png\" width=\"54\" height=\"54\" alt=\"站点地图\" title=\"站点地图\" /><p>站点地图</p></a></li>\r\n                            <li><a href=\"message.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav010.png\" width=\"54\" height=\"54\" alt=\"站点地图\" title=\"站点地图\" /><p>站点地图</p></a></li>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("feedback"));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav011b.png\" width=\"54\" height=\"54\" alt=\"在线留言\" title=\"在线留言\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav011.png\" width=\"54\" height=\"54\" alt=\"在线留言\" title=\"在线留言\" /><p>在线留言</p></a></li>\r\n                            <li><a href=\"DownLoad.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav011.png\" width=\"54\" height=\"54\" alt=\"在线留言\" title=\"在线留言\" /><p>在线留言</p></a></li>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("down"));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav014b.png\" width=\"54\" height=\"54\" alt=\"资料下载\" title=\"资料下载\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");

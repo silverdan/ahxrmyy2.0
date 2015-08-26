@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/25 16:30:29.
-		本页面代码由DTcms模板引擎生成于 2015/8/25 16:30:29. 
+		This page was created by DTcms Template Engine at 2015/8/26 9:57:33.
+		本页面代码由DTcms模板引擎生成于 2015/8/26 9:57:33. 
 	*/
 
 	base.OnInit(e);
