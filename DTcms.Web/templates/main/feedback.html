@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%set string category_title=get_category_title(model.category_id,"党群工作")%>
+<title>{get_channel(channel).title} - {site.name}</title>
+<meta name="keywords" content="{site.seo_keyword}" />
+<meta name="description" content="{site.seo_description}" />
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/second.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
+
+</head>
+
+<body>
+	<div class="wrap">
+<!--Header-->
+<%template src="_header.html"%>
+<!--/Header-->
+  <!--content begin-->
+  <div class="content">
+ 
+    <div class="center news_center news_contont">
+      <div class="site_nav news_nav"></div>      
+      <div class="news_mx work_mx">
+        <h3 id="H3Title">{model.title}</h3>
+        </div>
+        <div class="ToolBar">
+        	<div style="width:400px;">发布者：
+        		<span id="SpanAuthor">安化县人民医院</span>&nbsp; 
+        		<em id="addtime">发布日期:{model.add_time}</em> &nbsp;  
+        		<span id="SpanHitNum">浏览量:
+        			<script type="text/javascript" src="{config.webpath}tools/submit_ajax.ashx?action=view_article_click&id={model.id}&click=1"></script>
+				</span>
+        	</div>
+        	 
+	    </div>
+	    <!--分享-->
+	    	<%template src=/_share_js.html/%>
+	    	<!--/分享-->
+        <div class="news_mx">
+        <div id="Ul_Content">
+			{model.content}
+        </div>
+        <!--上下篇-->
+	    <div class="corlnum">
+	            <ul>
+	                <li><%=get_prevandnext_article(channel+"_show", -1, "[已经是第一篇]", 0)%><span>上一篇</span></li>
+	                <li><%=get_prevandnext_article(channel+"_show", 1, "[已经是最后一篇]", 0)%><span>下一篇</span></li>
+	            </ul>
+	    </div>
+	    <!--/上下篇-->
+      </div>
+    </div>
+    <div class="right mx_newsR">
+      <div class="mx_pop"><a href="#"><img alt="" src="<%templateskin%>/images/pic_017.jpg" width="252" height="225" /></a></div>
+      <div class="new_tj">
+        <h3>相关推荐</h3><!--此处为8条新闻列表-->
+            
+             
+              <%set DataTable relNews=get_article_list(channel, model.category_id, 8, "is_red=1  and id<>"+model.id)%>
+        <%foreach(DataRow dr in relNews.Rows)%>
+        <dl>
+            <dd><a href="<%linkurl(channel+"_show",{dr[id]})%>">{dr[title]}</a></dd>
+        </dl>
+        
+        <%/foreach%>
+        <%if(relNews.Rows.Count<1)%>
+        <div class="nodata">暂无相关的资讯...</div>
+        <%/if%>
+              
+      </div>
+    </div>
+  </div>
+  <!--content end-->
+  <div class="clear"></div>
+<!--Footer-->
+<%template src="_footer.html"%>
+<!--/Footer-->
+</div>
+</body>
+</html>
