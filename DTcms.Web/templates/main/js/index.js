@@ -126,7 +126,7 @@ function loaderHide() {
 loaderHide();
 $(function() {
 	$("div.Advert_time").show("fast");
-	var b = setInterval(function() { bindRandomOffices(); }, 20000);
+//	var b = setInterval(function() { bindRandomOffices(); }, 20000);
 	var IndexNum = 0, delay = 5000, interval = undefined, loader = undefined, IndexImagesLength = $("div#IndexImagesContent ul").children("li").length, LastNum = 0,IsFadeFinish=true;
 	$("div#IndexImages a").click(function() {
 		LastNum = IndexNum - 1;

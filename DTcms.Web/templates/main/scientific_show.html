@@ -34,7 +34,7 @@ $(function(){
     <div class="left ks_left">
     	
       <h3>{get_channel(channel).title}</h3>
-      <h4>Department of Neurology<br />Elderly</h4>
+      <h4>{channel.ToUpper()}<br /> </h4>
       <div class="ks_listL">
         <h5><img src="<%templateskin%>/images/pic_kstel.jpg" width="167" height="61" alt="医院总机" title="医院总机" /><br /><a href="Telephone.aspx"><em>按步骤精确查找号码</em></a></h5>
         <ul><!--此处显示子栏目标题列表-->
@@ -78,6 +78,9 @@ $(function(){
 <!--Footer-->
 <%template src="_footer.html"%>
 <!--/Footer-->
+		<!--quick nav start-->
+        <%template src="_quick_nav.html"%>
+        <!--quick nav end-->
 </div>
 </body>
 </html>

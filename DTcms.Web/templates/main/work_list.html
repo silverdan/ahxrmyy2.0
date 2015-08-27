@@ -42,7 +42,13 @@ $(function(){
                 <li><span><%datetostr({dr2[add_time]},MM-dd)%></span><a target="_blank"  href="<%linkurl(channel+"_show",{dr2[id]})%>">{dr2[title]}</a></li>
             <%/loop%>
           </ul>
-      <div class="page_mob02"> </div>
+                  	<div class="page_mob02">
+                    <!--页码列表-->
+                    <div id="anpNews">
+                        <div class="digg">{pagelist}</div>
+                    </div> 
+                    <!--/页码列表-->
+                </div>
      </div>
      
   </div>

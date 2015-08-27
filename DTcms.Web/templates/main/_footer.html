@@ -1,7 +1,7 @@
 ﻿<div class="footer">
     <div class="sy_newsp">
         <h3>人医院报</h3>
-        <select name="ddlYears" id="ddlYears" onchange="GetTimesByYear(this)">
+        <select name="ddlYears" id="ddlYears" >
             <option value="0">请选择年份</option>
             <option value="2015">2015年</option>
             <option value="2014">2014年</option>
@@ -22,7 +22,7 @@
     </div>
     <div class="sy_kslj">
         <ul>
-            <li><a target="_blank" href="#"><img src="<%templateskin%>/images/pic_weiboa.jpg" width="67" height="61" alt="人医官方微博" title="人医官方微博" /><span>人医微博<br /><em>WeiBo</em></span></a></li>
+            <li><a target="_blank" href="http://t.qq.com/ahrmyy"><img src="<%templateskin%>/images/pic_weiboa.jpg" width="67" height="61" alt="人医官方微博" title="人医官方微博" /><span>人医微博<br /><em>WeiBo</em></span></a></li>
             <li><a target="_blank" href="#"><img src="<%templateskin%>/images/pic_tela.jpg" width="67" height="61" alt="电话咨询" title="电话咨询" /><span>电话咨询<br /><em>PhoneBook</em></span></a></li>
             <li><a target="_blank" href="<%linkurl("video")%>"><img src="<%templateskin%>/images/pic_videoa.jpg" width="67" height="61" alt="视频" title="视频" /><span>视频<br /><em>Video</em></span></a></li>
             <li><a target="_blank" href="<%linkurl("donw")%>"><img src="<%templateskin%>/images/pic_downa.jpg" width="67" height="61" alt="资料下载" title="资料下载" /><span>资料下载<br /><em>DownLoad</em></span></a></li>
@@ -31,7 +31,7 @@
     <div class="sy_bottom">
     	 <a target="_blank" href="<%linkurl("feedback")%>">留言反馈</a>
         <h5>主办单位：<%=site.company%>  &nbsp; &nbsp;咨询电话：{site.tel}&nbsp;&nbsp;&nbsp; &nbsp;门诊预约挂号电话： &nbsp; &nbsp;急救中心电话：0737 7298120  传真：{site.fax} &nbsp;&nbsp;</h5>
-        <a href="links.aspx" target="_blank" id="BaseLinks"><img src="images/yqlj_btn.gif" width="56" height="16" /></a>
+        <a href="links.aspx" target="_blank" id="BaseLinks"><img src="<%templateskin%>/images/yqlj_btn.gif" width="56" height="16" /></a>
         <h6>地 址：{site.address} &nbsp; &nbsp;版权所有：{site.copyright}&nbsp; &nbsp;{site.crod} &nbsp; &nbsp;<em><a href="http://www.miraclevision.net/" target="_blank">技术支持：长沙三替信息科技有限公司</a></em></h6>
     </div>
    

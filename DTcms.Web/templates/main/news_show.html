@@ -8,7 +8,7 @@
 <meta name="keywords" content="{model.seo_keywords}" />
 <meta name="description" content="{model.seo_description}" />
 <link href="{config.webpath}css/pagination.css" rel="stylesheet" />
-<!--<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />-->
+<link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
 
     <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
     <link href="<%templateskin%>/css/second.css" rel="stylesheet" type="text/css" />
@@ -66,6 +66,15 @@
     </div>
     <!--/上下篇-->
       </div>
+      <!--用户评论-->
+    <%if(model.is_msg==1)%>
+    <h2 class="base-tit">
+      <i>共有<b><script type="text/javascript" src="{config.webpath}tools/submit_ajax.ashx?action=view_comment_count&id={model.id}"></script></b>访客发表了评论</i>
+      <span>网友评论</span>
+    </h2>
+    <%template src="_comment_box.html"%>
+    <%/if%>
+    <!--用户评论-->
     </div>
     <div class="right news_right n_mx">
       <h5><img src="<%templateskin%>/images/pic_024.jpg" width="168" height="71" alt="图片描述" title="图片描述" /></h5>

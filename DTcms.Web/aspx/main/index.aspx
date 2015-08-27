@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/26 10:47:09.
-		本页面代码由DTcms模板引擎生成于 2015/8/26 10:47:09. 
+		This page was created by DTcms Template Engine at 2015/8/27 16:52:57.
+		本页面代码由DTcms模板引擎生成于 2015/8/27 16:52:57. 
 	*/
 
 	base.OnInit(e);
@@ -45,10 +45,10 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("script>\r\n    <script type=\"text/javascript\" charset=\"utf-8\" src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/js/imgReady.js\"></");
-	templateBuilder.Append("script>\r\n    <script type=\"text/javascript\" charset=\"utf-8\" src=\"");
+	templateBuilder.Append("script>\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/js/index.js\"></");
-	templateBuilder.Append("script>\r\n<script type=\"text/javascript\">\r\n$(function(){\r\n	$(\".focusbox\").flexslider({\r\n		directionNav: false,\r\n		pauseOnAction: false\r\n	});\r\n});\r\n</");
+	templateBuilder.Append("script>\r\n    <script></");
 	templateBuilder.Append("script>\r\n</head>\r\n\r\n<body>\r\n    <div class=\"wrap\">\r\n        <!--Header-->\r\n        ");
 
 	templateBuilder.Append("<div class=\"header\">\r\n    <h1><a href=\"index.aspx\"><img src=\"");
@@ -230,7 +230,7 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav008b.png\" width=\"54\" height=\"54\" alt=\"信息查询\" title=\"信息查询\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav008.png\" width=\"54\" height=\"54\" alt=\"信息查询\" title=\"信息查询\" /><p>信息查询</p></a></li>\r\n                            <li><a href=\"http://e.weibo.com/hnsrmyybnly\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav008.png\" width=\"54\" height=\"54\" alt=\"信息查询\" title=\"信息查询\" /><p>信息查询</p></a></li>\r\n                            <li><a href=\"http://t.qq.com/ahrmyy\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav009b.png\" width=\"54\" height=\"54\" alt=\"人医微博\" title=\"人医微博\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
@@ -286,7 +286,7 @@ override protected void OnInit(EventArgs e)
 
 	templateBuilder.Append("\r\n                    </div>\r\n                    <div id=\"loader\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/image/loading.gif\" width=\"16px\" height=\"16px\" /></div>\r\n                </div>\r\n                <div>\r\n                    <!--选项卡 begin-->\r\n                    <div class=\"bd\" id=\"n1Tab\">\r\n                        <div class=\"Tabtitle\">\r\n                            <h3 class=\"nTabs active\"><a href=\"news.aspx\" target=\"_blank\">人医快讯<em>Hospital News</em></a></h3>\r\n                            <h3 class=\"nTabs\"><a href=\"Notice.aspx\" target=\"_blank\">最新公告<em>Bulletin</em></a></h3>\r\n                            <h3 class=\"nTabs\">官方微博<em>WeiBo</em></h3>\r\n                        </div>\r\n                        <div class=\"TabContent\">\r\n                        	<!--快讯公告-->\r\n                            <div id=\"n1Tab_Content0\" class=\"n1Tab_Content\">\r\n                            	");
+	templateBuilder.Append("/images/loading.gif\" width=\"16px\" height=\"16px\" /></div>\r\n                </div>\r\n                <div>\r\n                    <!--选项卡 begin-->\r\n                    <div class=\"bd\" id=\"n1Tab\">\r\n                        <div class=\"Tabtitle\">\r\n                            <h3 class=\"nTabs active\"><a href=\"news.aspx\" target=\"_blank\">人医快讯<em>Hospital News</em></a></h3>\r\n                            <h3 class=\"nTabs\"><a href=\"Notice.aspx\" target=\"_blank\">最新公告<em>Bulletin</em></a></h3>\r\n                            <h3 class=\"nTabs\">官方微博<em>WeiBo</em></h3>\r\n                        </div>\r\n                        <div class=\"TabContent\">\r\n                        	<!--快讯公告-->\r\n                            <div id=\"n1Tab_Content0\" class=\"n1Tab_Content\">\r\n                            	");
 	DataTable focusNews = get_article_list("news", 0, 1, "status=0 and is_slide=1 and img_url<>''");
 
 	foreach(DataRow dr in focusNews.Rows)
@@ -334,16 +334,16 @@ override protected void OnInit(EventArgs e)
 
 	templateBuilder.Append("\r\n                                    </ul>\r\n                                </div>\r\n                            </div>\r\n                            <div id=\"n1Tab_Content2\" class=\"n1Tab_Content\">\r\n                                <ul class=\"list_top\" id=\"weiboShare\"></ul>\r\n                            </div>\r\n                        </div>\r\n                    </div><!--选项卡 end-->\r\n                </div>\r\n                <div class=\"doctors\">\r\n                    <h3><span><a href=\"visit_nav.aspx\">科室与医生</a></span><span class=\"style1\">Department & Doctors</span></h3>\r\n                    <ul id=\"Offices\">\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=24\">泌尿外科</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=6\">肾病风湿免疫科</a></li>\r\n\r\n                        <li class=\"sty01\"><a target=\"_blank\" href=\"visit_office.aspx?id=57\">神经内科康馨病房</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=12\">神经内科</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=13\">消化内科</a></li>\r\n\r\n                        <li class=\"sty01\"><a target=\"_blank\" href=\"visit_office.aspx?id=30\">河南省立眼科医院</a></li>\r\n\r\n                        <li class=\"sty01\"><a target=\"_blank\" href=\"visit_office.aspx?id=2\">过敏反应科（变态反应科）</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=40\">整形美容外科</a></li>\r\n\r\n                    </ul>\r\n                    <div id=\"doctorsLoader\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/loading.gif\" width=\"16px\" height=\"16px\" /></div>\r\n                    <span class=\"btn_doc\">\r\n                        <a href=\"javascript:bindRandomOffices()\"><img src=\"");
+	templateBuilder.Append("/images/loading.gif\" width=\"16px\" height=\"16px\" /></div>\r\n                    <span class=\"btn_doc\">\r\n                        <a href=\"#\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/btn_02right.png\" width=\"11\" height=\"10\" alt=\"切换\" /></a>\r\n                    </span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <!--content end-->\r\n        <div class=\"clear\"></div>\r\n        <script type=\"text/javascript\" charset=\"utf-8\" src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/js/index.js\"></");
 	templateBuilder.Append("script>\r\n        <!--Footer-->\r\n        ");
 
-	templateBuilder.Append("<div class=\"footer\">\r\n    <div class=\"sy_newsp\">\r\n        <h3>人医院报</h3>\r\n        <select name=\"ddlYears\" id=\"ddlYears\" onchange=\"GetTimesByYear(this)\">\r\n            <option value=\"0\">请选择年份</option>\r\n            <option value=\"2015\">2015年</option>\r\n            <option value=\"2014\">2014年</option>\r\n        </select>\r\n        <select class=\"sty01\" name=\"ddlTimes\" id=\"ddlTimes\">\r\n            <option value=\"0\">选择期数</option>\r\n        </select>\r\n        <input class=\"sea_go\" name=\"btnGoNewsPaper\" id=\"btnGoNewsPaper\" onclick=\"GoNewsPaper()\" type=\"button\" />\r\n    </div>\r\n    <div class=\"sy_ysg\">\r\n        <dl>\r\n            <dt><a href=\"history.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("<div class=\"footer\">\r\n    <div class=\"sy_newsp\">\r\n        <h3>人医院报</h3>\r\n        <select name=\"ddlYears\" id=\"ddlYears\" >\r\n            <option value=\"0\">请选择年份</option>\r\n            <option value=\"2015\">2015年</option>\r\n            <option value=\"2014\">2014年</option>\r\n        </select>\r\n        <select class=\"sty01\" name=\"ddlTimes\" id=\"ddlTimes\">\r\n            <option value=\"0\">选择期数</option>\r\n        </select>\r\n        <input class=\"sea_go\" name=\"btnGoNewsPaper\" id=\"btnGoNewsPaper\" onclick=\"GoNewsPaper()\" type=\"button\" />\r\n    </div>\r\n    <div class=\"sy_ysg\">\r\n        <dl>\r\n            <dt><a href=\"history.aspx\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/pic_ysg01.jpg\" width=\"160\" height=\"59\" alt=\"院史馆\" title=\"院史馆\" /></a></dt>\r\n            <dd>\r\n                <a href=\"history.aspx\">人医历史</a>\r\n                <p>Hospital Historical</p>\r\n            </dd>\r\n        </dl>\r\n    </div>\r\n    <div class=\"sy_kslj\">\r\n        <ul>\r\n            <li><a target=\"_blank\" href=\"#\"><img src=\"");
+	templateBuilder.Append("/images/pic_ysg01.jpg\" width=\"160\" height=\"59\" alt=\"院史馆\" title=\"院史馆\" /></a></dt>\r\n            <dd>\r\n                <a href=\"history.aspx\">人医历史</a>\r\n                <p>Hospital Historical</p>\r\n            </dd>\r\n        </dl>\r\n    </div>\r\n    <div class=\"sy_kslj\">\r\n        <ul>\r\n            <li><a target=\"_blank\" href=\"http://t.qq.com/ahrmyy\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/pic_weiboa.jpg\" width=\"67\" height=\"61\" alt=\"人医官方微博\" title=\"人医官方微博\" /><span>人医微博<br /><em>WeiBo</em></span></a></li>\r\n            <li><a target=\"_blank\" href=\"#\"><img src=\"");
 	templateBuilder.Append("/templates/main");
@@ -367,7 +367,9 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(site.tel));
 	templateBuilder.Append("&nbsp;&nbsp;&nbsp; &nbsp;门诊预约挂号电话： &nbsp; &nbsp;急救中心电话：0737 7298120  传真：");
 	templateBuilder.Append(Utils.ObjectToStr(site.fax));
-	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"links.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"images/yqlj_btn.gif\" width=\"56\" height=\"16\" /></a>\r\n        <h6>地 址：");
+	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"links.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"");
+	templateBuilder.Append("/templates/main");
+	templateBuilder.Append("/images/yqlj_btn.gif\" width=\"56\" height=\"16\" /></a>\r\n        <h6>地 址：");
 	templateBuilder.Append(Utils.ObjectToStr(site.address));
 	templateBuilder.Append(" &nbsp; &nbsp;版权所有：");
 	templateBuilder.Append(Utils.ObjectToStr(site.copyright));
