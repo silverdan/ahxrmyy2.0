@@ -7,9 +7,11 @@ namespace DTcms.Web.Plugin.Link
 {
     public partial class link : Web.UI.BasePage
     {
+        protected string channel = "link";
         /// <summary>
         /// 重写虚方法,此方法将在Init事件前执行
         /// </summary>
+        /// 
         protected override void ShowPage()
         {
             

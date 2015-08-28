@@ -70,6 +70,18 @@ namespace DTcms.Web.UI
             return new BLL.article_category().GetChildList(parent_id, channel_name);
         }
 
+        /// <summary>
+        /// 返回指定类别下列表(一层)
+        /// </summary>
+        /// <param name="channel_name">频道名称</param>
+        /// <param name="parent_id">父类别ID</param>
+        /// <param name="topNum">TOP数</param>
+        /// <returns>DataTable</returns>
+        protected DataTable get_category_child_list(string channel_name, int parent_id,int topNum)
+        {
+            return new BLL.article_category().GetChildList(parent_id, channel_name,topNum);
+        }
+
         #region 私有方法===========================================
         /// <summary>
         /// 递归找到父节点

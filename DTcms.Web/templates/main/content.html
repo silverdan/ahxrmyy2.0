@@ -7,11 +7,15 @@
 <meta content="{model.seo_keywords}" name="keywords" />
 <meta content="{model.seo_description}" name="description" />
 <link href="<%templateskin%>/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/second.css" rel="stylesheet" type="text/css" />
+    <link href="<%templateskin%>/css/base.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" charset="utf-8" src="{config.webpath}scripts/jquery/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="<%templateskin%>/js/common.js"></script>
 </head>
 
 <body>
+	<div class="wrap">
 <!--Header-->
 <%template src="_header.html"%>
 <!--/Header-->
@@ -74,5 +78,6 @@
 <!--Footer-->
 <%template src="_footer.html"%>
 <!--/Footer-->
+<div class="wrap">
 </body>
 </html>

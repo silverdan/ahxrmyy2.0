@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/27 16:52:58.
-		本页面代码由DTcms模板引擎生成于 2015/8/27 16:52:58. 
+		This page was created by DTcms Template Engine at 2015/8/28 17:20:06.
+		本页面代码由DTcms模板引擎生成于 2015/8/28 17:20:06. 
 	*/
 
 	base.OnInit(e);
@@ -30,13 +30,19 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(config.webpath));
 	templateBuilder.Append("css/pagination.css\" rel=\"stylesheet\" />\r\n<link href=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/css/style.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
+	templateBuilder.Append("/css/style.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"");
+	templateBuilder.Append("/templates/main");
+	templateBuilder.Append("/css/common.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"");
+	templateBuilder.Append("/templates/main");
+	templateBuilder.Append("/css/second.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"");
+	templateBuilder.Append("/templates/main");
+	templateBuilder.Append("/css/base.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
 	templateBuilder.Append(Utils.ObjectToStr(config.webpath));
 	templateBuilder.Append("scripts/jquery/jquery-1.11.2.min.js\"></");
 	templateBuilder.Append("script>\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/js/common.js\"></");
-	templateBuilder.Append("script>\r\n</head>\r\n\r\n<body>\r\n<!--Header-->\r\n");
+	templateBuilder.Append("script>\r\n</head>\r\n\r\n<body>\r\n	<div class=\"wrap\">\r\n<!--Header-->\r\n");
 
 	templateBuilder.Append("<div class=\"header\">\r\n    <h1><a href=\"index.aspx\"><img src=\"");
 	templateBuilder.Append("/templates/main");
@@ -323,7 +329,7 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(site.tel));
 	templateBuilder.Append("&nbsp;&nbsp;&nbsp; &nbsp;门诊预约挂号电话： &nbsp; &nbsp;急救中心电话：0737 7298120  传真：");
 	templateBuilder.Append(Utils.ObjectToStr(site.fax));
-	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"links.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"");
+	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"link.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/yqlj_btn.gif\" width=\"56\" height=\"16\" /></a>\r\n        <h6>地 址：");
 	templateBuilder.Append(Utils.ObjectToStr(site.address));
@@ -331,11 +337,11 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(site.copyright));
 	templateBuilder.Append("&nbsp; &nbsp;");
 	templateBuilder.Append(Utils.ObjectToStr(site.crod));
-	templateBuilder.Append(" &nbsp; &nbsp;<em><a href=\"http://www.miraclevision.net/\" target=\"_blank\">技术支持：长沙三替信息科技有限公司</a></em></h6>\r\n    </div>\r\n   \r\n</div>\r\n<div id=\"Bottom_CountCodeDiv\" style=\"display:none;\">\r\n    <script type=\"text/javascript\">\r\n    var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3F4a1d36386e8734a5fd29acec9114818d' type='text/javascript'%3E%3C/script%3E\"));\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3Fafd2ae44e23648da4e8a81a7b1349be4' type='text/javascript'%3E%3C/script%3E\"));\r\n    </");
+	templateBuilder.Append(" &nbsp; &nbsp;<em><a href=\"#\" target=\"_blank\">技术支持：夏瑞丹</a></em></h6>\r\n    </div>\r\n   \r\n</div>\r\n<div id=\"Bottom_CountCodeDiv\" style=\"display:none;\">\r\n    <script type=\"text/javascript\">\r\n    var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3F4a1d36386e8734a5fd29acec9114818d' type='text/javascript'%3E%3C/script%3E\"));\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3Fafd2ae44e23648da4e8a81a7b1349be4' type='text/javascript'%3E%3C/script%3E\"));\r\n    </");
 	templateBuilder.Append("script>\r\n</div>\r\n<!--footer end-->\r\n<div class=\"page_tr\"></div>");
 
 
-	templateBuilder.Append("\r\n<!--/Footer-->\r\n</body>\r\n</html>");
+	templateBuilder.Append("\r\n<!--/Footer-->\r\n</div>\r\n</body>\r\n</html>");
 	Response.Write(templateBuilder.ToString());
 }
 </script>

@@ -121,23 +121,10 @@
                 <div class="doctors">
                     <h3><span><a href="visit_nav.aspx">科室与医生</a></span><span class="style1">Department & Doctors</span></h3>
                     <ul id="Offices">
-
-                        <li><a target="_blank" href="visit_office.aspx?id=24">泌尿外科</a></li>
-
-                        <li><a target="_blank" href="visit_office.aspx?id=6">肾病风湿免疫科</a></li>
-
-                        <li class="sty01"><a target="_blank" href="visit_office.aspx?id=57">神经内科康馨病房</a></li>
-
-                        <li><a target="_blank" href="visit_office.aspx?id=12">神经内科</a></li>
-
-                        <li><a target="_blank" href="visit_office.aspx?id=13">消化内科</a></li>
-
-                        <li class="sty01"><a target="_blank" href="visit_office.aspx?id=30">河南省立眼科医院</a></li>
-
-                        <li class="sty01"><a target="_blank" href="visit_office.aspx?id=2">过敏反应科（变态反应科）</a></li>
-
-                        <li><a target="_blank" href="visit_office.aspx?id=40">整形美容外科</a></li>
-
+					<%set DataTable expList=get_category_child_list("experts", 0,8)%>
+        				<%foreach(DataRow expdr in expList.Rows)%>
+							        <li><a target="_blank" href="<%linkurl("experts_list",{expdr[id]})%>">{expdr[title]}</a></li>
+						<%/foreach%>
                     </ul>
                     <div id="doctorsLoader"><img src="<%templateskin%>/images/loading.gif" width="16px" height="16px" /></div>
                     <span class="btn_doc">

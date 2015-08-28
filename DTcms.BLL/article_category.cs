@@ -97,6 +97,19 @@ namespace DTcms.BLL
         }
 
         /// <summary>
+        /// 取得该频道指定类别下的列表的TOP N
+        /// </summary>
+        /// <param name="parent_id"></param>
+        /// <param name="channel_name"></param>
+        /// <param name="topNum"></param>
+        /// <returns></returns>
+        public DataTable GetChildList(int parent_id, string channel_name,int topNum)
+        {
+            int channel_id = new BLL.channel().GetChannelId(channel_name);
+            return dal.GetChildList(parent_id, channel_id,topNum);
+        }
+
+        /// <summary>
         /// 取得该频道下所有类别列表
         /// </summary>
         /// <param name="parent_id">父ID</param>

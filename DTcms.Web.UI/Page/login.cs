@@ -9,6 +9,7 @@ namespace DTcms.Web.UI.Page
     public partial class login : Web.UI.BasePage
     {
         protected string turl = string.Empty;
+        protected string channel = "index";         //频道
         /// <summary>
         /// 重写父类的虚方法,此方法将在Init事件前执行
         /// </summary>

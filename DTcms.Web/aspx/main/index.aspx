@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/27 16:52:57.
-		本页面代码由DTcms模板引擎生成于 2015/8/27 16:52:57. 
+		This page was created by DTcms Template Engine at 2015/8/28 17:20:05.
+		本页面代码由DTcms模板引擎生成于 2015/8/28 17:20:05. 
 	*/
 
 	base.OnInit(e);
@@ -332,7 +332,19 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("\" title=\"" + Utils.ObjectToStr(newdrno["title"]) + "\">" + Utils.ObjectToStr(newdrno["title"]) + "</a>\r\n							        </li>\r\n							        ");
 	}	//end for if
 
-	templateBuilder.Append("\r\n                                    </ul>\r\n                                </div>\r\n                            </div>\r\n                            <div id=\"n1Tab_Content2\" class=\"n1Tab_Content\">\r\n                                <ul class=\"list_top\" id=\"weiboShare\"></ul>\r\n                            </div>\r\n                        </div>\r\n                    </div><!--选项卡 end-->\r\n                </div>\r\n                <div class=\"doctors\">\r\n                    <h3><span><a href=\"visit_nav.aspx\">科室与医生</a></span><span class=\"style1\">Department & Doctors</span></h3>\r\n                    <ul id=\"Offices\">\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=24\">泌尿外科</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=6\">肾病风湿免疫科</a></li>\r\n\r\n                        <li class=\"sty01\"><a target=\"_blank\" href=\"visit_office.aspx?id=57\">神经内科康馨病房</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=12\">神经内科</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=13\">消化内科</a></li>\r\n\r\n                        <li class=\"sty01\"><a target=\"_blank\" href=\"visit_office.aspx?id=30\">河南省立眼科医院</a></li>\r\n\r\n                        <li class=\"sty01\"><a target=\"_blank\" href=\"visit_office.aspx?id=2\">过敏反应科（变态反应科）</a></li>\r\n\r\n                        <li><a target=\"_blank\" href=\"visit_office.aspx?id=40\">整形美容外科</a></li>\r\n\r\n                    </ul>\r\n                    <div id=\"doctorsLoader\"><img src=\"");
+	templateBuilder.Append("\r\n                                    </ul>\r\n                                </div>\r\n                            </div>\r\n                            <div id=\"n1Tab_Content2\" class=\"n1Tab_Content\">\r\n                                <ul class=\"list_top\" id=\"weiboShare\"></ul>\r\n                            </div>\r\n                        </div>\r\n                    </div><!--选项卡 end-->\r\n                </div>\r\n                <div class=\"doctors\">\r\n                    <h3><span><a href=\"visit_nav.aspx\">科室与医生</a></span><span class=\"style1\">Department & Doctors</span></h3>\r\n                    <ul id=\"Offices\">\r\n					");
+	DataTable expList = get_category_child_list("experts", 0,8);
+
+	foreach(DataRow expdr in expList.Rows)
+	{
+
+	templateBuilder.Append("\r\n							        <li><a target=\"_blank\" href=\"");
+	templateBuilder.Append(linkurl("experts_list",Utils.ObjectToStr(expdr["id"])));
+
+	templateBuilder.Append("\">" + Utils.ObjectToStr(expdr["title"]) + "</a></li>\r\n						");
+	}	//end for if
+
+	templateBuilder.Append("\r\n                    </ul>\r\n                    <div id=\"doctorsLoader\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/loading.gif\" width=\"16px\" height=\"16px\" /></div>\r\n                    <span class=\"btn_doc\">\r\n                        <a href=\"#\"><img src=\"");
 	templateBuilder.Append("/templates/main");
@@ -367,7 +379,7 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(site.tel));
 	templateBuilder.Append("&nbsp;&nbsp;&nbsp; &nbsp;门诊预约挂号电话： &nbsp; &nbsp;急救中心电话：0737 7298120  传真：");
 	templateBuilder.Append(Utils.ObjectToStr(site.fax));
-	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"links.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"");
+	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"link.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/yqlj_btn.gif\" width=\"56\" height=\"16\" /></a>\r\n        <h6>地 址：");
 	templateBuilder.Append(Utils.ObjectToStr(site.address));
@@ -375,7 +387,7 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(site.copyright));
 	templateBuilder.Append("&nbsp; &nbsp;");
 	templateBuilder.Append(Utils.ObjectToStr(site.crod));
-	templateBuilder.Append(" &nbsp; &nbsp;<em><a href=\"http://www.miraclevision.net/\" target=\"_blank\">技术支持：长沙三替信息科技有限公司</a></em></h6>\r\n    </div>\r\n   \r\n</div>\r\n<div id=\"Bottom_CountCodeDiv\" style=\"display:none;\">\r\n    <script type=\"text/javascript\">\r\n    var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3F4a1d36386e8734a5fd29acec9114818d' type='text/javascript'%3E%3C/script%3E\"));\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3Fafd2ae44e23648da4e8a81a7b1349be4' type='text/javascript'%3E%3C/script%3E\"));\r\n    </");
+	templateBuilder.Append(" &nbsp; &nbsp;<em><a href=\"#\" target=\"_blank\">技术支持：夏瑞丹</a></em></h6>\r\n    </div>\r\n   \r\n</div>\r\n<div id=\"Bottom_CountCodeDiv\" style=\"display:none;\">\r\n    <script type=\"text/javascript\">\r\n    var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3F4a1d36386e8734a5fd29acec9114818d' type='text/javascript'%3E%3C/script%3E\"));\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3Fafd2ae44e23648da4e8a81a7b1349be4' type='text/javascript'%3E%3C/script%3E\"));\r\n    </");
 	templateBuilder.Append("script>\r\n</div>\r\n<!--footer end-->\r\n<div class=\"page_tr\"></div>");
 
 

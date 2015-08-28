@@ -318,6 +318,26 @@ namespace DTcms.DAL
         }
 
         /// <summary>
+        /// 取得指定类别下的列表的TOP N
+        /// </summary>
+        /// <param name="parent_id">父ID</param>
+        /// <param name="channel_id">频道ID</param>
+        /// <returns></returns>
+        public DataTable GetChildList(int parent_id, int channel_id , int topNum)
+        {
+            if (topNum == 0 )
+                topNum = 1;
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select top ");
+            strSql.Append(topNum.ToString());
+            strSql.Append("  id,channel_id,title,call_index,parent_id,class_list,class_layer,sort_id,link_url,img_url,content,seo_title,seo_keywords,seo_description");
+            strSql.Append(" from " + databaseprefix + "article_category");
+            strSql.Append(" where channel_id=" + channel_id + " and parent_id=" + parent_id + " order by sort_id asc,id desc");
+            DataSet ds = DbHelperSQL.Query(strSql.ToString());
+            return ds.Tables[0];
+        }
+
+        /// <summary>
         /// 取得所有类别列表
         /// </summary>
         /// <param name="parent_id">父ID</param>

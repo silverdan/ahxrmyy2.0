@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/27 16:52:57.
-		本页面代码由DTcms模板引擎生成于 2015/8/27 16:52:57. 
+		This page was created by DTcms Template Engine at 2015/8/28 17:20:05.
+		本页面代码由DTcms模板引擎生成于 2015/8/28 17:20:05. 
 	*/
 
 	base.OnInit(e);
@@ -26,7 +26,13 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(config.webpath));
 	templateBuilder.Append("scripts/artdialog/ui-dialog.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<link href=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/css/style.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
+	templateBuilder.Append("/css/style.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"");
+	templateBuilder.Append("/templates/main");
+	templateBuilder.Append("/css/common.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"");
+	templateBuilder.Append("/templates/main");
+	templateBuilder.Append("/css/second.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"");
+	templateBuilder.Append("/templates/main");
+	templateBuilder.Append("/css/base.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
 	templateBuilder.Append(Utils.ObjectToStr(config.webpath));
 	templateBuilder.Append("scripts/jquery/jquery-1.11.2.min.js\"></");
 	templateBuilder.Append("script>\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
@@ -35,130 +41,11 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("script>\r\n<script type=\"text/javascript\" charset=\"utf-8\" src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/js/common.js\"></");
-	templateBuilder.Append("script>\r\n</head>\r\n\r\n<body>\r\n<!--Header-->\r\n");
+	templateBuilder.Append("script>\r\n</head>\r\n\r\n<body>\r\n	 <div class=\"wrap\">\r\n<!--Header-->\r\n");
 
 	templateBuilder.Append("<div class=\"header\">\r\n    <h1><a href=\"index.aspx\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/logo.jpg\" width=\"301\" height=\"62\" alt=\"安化县民医院官方网站\" title=\"安化县人民医院官方网站\" /></a></h1>\r\n    <h2>\r\n        <span class=\"sty_right\">\r\n        <!--<a href=\"Site_Map.aspx\">站点地图</a> |-->");
-	templateBuilder.Append(Utils.ObjectToStr(channel));
-	templateBuilder.Append("\r\n        <a href=\"javascript:void(0)\" onclick=\"addToFavorite()\">加入收藏</a> | \r\n        <a href=\"#\" target=\"_blank\">人事管理</a> |  \r\n        <a href=\"#\" target=\"_blank\">内部OA</a>  </span>\r\n    </h2>\r\n    <input type=\"text\" class=\"search\" name=\"tbSearch\" id=\"tbSearch\" value=\"\" onkeypress=\"if(event.keyCode==13){document.all.btnSearch.click();return false;}\" placeholder=\"输入回车搜索\" x-webkit-speech=\"\"  />\r\n    <input type=\"button\" class=\"btn_search\" name=\"btnSearch\" id=\"btnSearch\" value=\"搜 索\" onclick=\"SearchWords()\" />\r\n    <ul>\r\n\r\n    <li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("index"));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n			");
-	if (channel=="index")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append("><a href=\"");
-	templateBuilder.Append(linkurl("index"));
-
-	templateBuilder.Append("\">首页</a></li>\r\n    <li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("about_show",102));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n    	");
-	if (channel=="about")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append(" ><a href=\"");
-	templateBuilder.Append(linkurl("about_show",102));
-
-	templateBuilder.Append("\">医院概况</a></li>\r\n    <li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("treatment_list",52));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n    	");
-	if (channel=="treatment")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append(" ><a href=\"");
-	templateBuilder.Append(linkurl("treatment_list",52));
-
-	templateBuilder.Append("\">就诊指南</a></li>\r\n    <li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("news_list",65));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n    	");
-	if (channel=="news")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append("><a href=\"");
-	templateBuilder.Append(linkurl("news_list",65));
-
-	templateBuilder.Append("\">新闻动态</a></li>\r\n    <li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("work"));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n    	");
-	if (channel=="work")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append("><a href=\"");
-	templateBuilder.Append(linkurl("work"));
-
-	templateBuilder.Append("\">党群工作</a></li>\r\n    <li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("experts_list"));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\" \r\n			");
-	if (channel=="experts")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append("><a href=\"");
-	templateBuilder.Append(linkurl("experts_list"));
-
-	templateBuilder.Append("\">科室专家</a></li>\r\n		<li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("nursing"));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n			");
-	if (channel=="nursing")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append("><a href=\"");
-	templateBuilder.Append(linkurl("nursing"));
-
-	templateBuilder.Append("\">护理园地</a></li>\r\n		<li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("scientific"));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n			");
-	if (channel=="scientific")
-	{
-
-	templateBuilder.Append(" class='on'");
-	}	//end for if
-
-	templateBuilder.Append("><a href=\"");
-	templateBuilder.Append(linkurl("scientific"));
-
-	templateBuilder.Append("\">科研教学</a></li>\r\n    <li onclick=\"self.location='");
-	templateBuilder.Append(linkurl("science"));
-
-	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n    	");
-	if (channel=="science")
-	{
-
-	templateBuilder.Append(" class=\"on\"");
-	}	//end for if
-
-	templateBuilder.Append("><a href=\"");
-	templateBuilder.Append(linkurl("science"));
-
-	templateBuilder.Append("\">健康科普</a></li>    \r\n    </ul>\r\n</div>");
+	templateBuilder.Append("/images/logo.jpg\" width=\"301\" height=\"62\" alt=\"安化县民医院官方网站\" title=\"安化县人民医院官方网站\" /></a></h1>\r\n    <h2>\r\n        <span class=\"sty_right\">\r\n        <!--<a href=\"Site_Map.aspx\">站点地图</a> |-->\r\n        <a href=\"javascript:void(0)\" onclick=\"addToFavorite()\">加入收藏</a> | \r\n        <a href=\"#\" target=\"_blank\">人事管理</a> |  \r\n        <a href=\"#\" target=\"_blank\">内部OA</a>  </span>\r\n    </h2>\r\n    <input type=\"text\" class=\"search\" name=\"tbSearch\" id=\"tbSearch\" value=\"\" onkeypress=\"if(event.keyCode==13){document.all.btnSearch.click();return false;}\" placeholder=\"输入回车搜索\" x-webkit-speech=\"\"  />\r\n    <input type=\"button\" class=\"btn_search\" name=\"btnSearch\" id=\"btnSearch\" value=\"搜 索\" onclick=\"SearchWords()\" />\r\n</div>");
 
 
 	templateBuilder.Append("\r\n<!--/Header-->\r\n\r\n<div class=\"main-box\">\r\n  <div class=\"section clearfix\">\r\n  ");
@@ -339,7 +226,7 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(site.tel));
 	templateBuilder.Append("&nbsp;&nbsp;&nbsp; &nbsp;门诊预约挂号电话： &nbsp; &nbsp;急救中心电话：0737 7298120  传真：");
 	templateBuilder.Append(Utils.ObjectToStr(site.fax));
-	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"links.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"");
+	templateBuilder.Append(" &nbsp;&nbsp;</h5>\r\n        <a href=\"link.aspx\" target=\"_blank\" id=\"BaseLinks\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/yqlj_btn.gif\" width=\"56\" height=\"16\" /></a>\r\n        <h6>地 址：");
 	templateBuilder.Append(Utils.ObjectToStr(site.address));
@@ -347,11 +234,11 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append(Utils.ObjectToStr(site.copyright));
 	templateBuilder.Append("&nbsp; &nbsp;");
 	templateBuilder.Append(Utils.ObjectToStr(site.crod));
-	templateBuilder.Append(" &nbsp; &nbsp;<em><a href=\"http://www.miraclevision.net/\" target=\"_blank\">技术支持：长沙三替信息科技有限公司</a></em></h6>\r\n    </div>\r\n   \r\n</div>\r\n<div id=\"Bottom_CountCodeDiv\" style=\"display:none;\">\r\n    <script type=\"text/javascript\">\r\n    var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3F4a1d36386e8734a5fd29acec9114818d' type='text/javascript'%3E%3C/script%3E\"));\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3Fafd2ae44e23648da4e8a81a7b1349be4' type='text/javascript'%3E%3C/script%3E\"));\r\n    </");
+	templateBuilder.Append(" &nbsp; &nbsp;<em><a href=\"#\" target=\"_blank\">技术支持：夏瑞丹</a></em></h6>\r\n    </div>\r\n   \r\n</div>\r\n<div id=\"Bottom_CountCodeDiv\" style=\"display:none;\">\r\n    <script type=\"text/javascript\">\r\n    var _bdhmProtocol = ((\"https:\" == document.location.protocol) ? \" https://\" : \" http://\");\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3F4a1d36386e8734a5fd29acec9114818d' type='text/javascript'%3E%3C/script%3E\"));\r\n    document.write(unescape(\"%3Cscript src='\" + _bdhmProtocol + \"hm.baidu.com/h.js%3Fafd2ae44e23648da4e8a81a7b1349be4' type='text/javascript'%3E%3C/script%3E\"));\r\n    </");
 	templateBuilder.Append("script>\r\n</div>\r\n<!--footer end-->\r\n<div class=\"page_tr\"></div>");
 
 
-	templateBuilder.Append("\r\n<!--/Footer-->\r\n</body>\r\n</html>");
+	templateBuilder.Append("\r\n<!--/Footer-->\r\n</div>\r\n</body>\r\n</html>");
 	Response.Write(templateBuilder.ToString());
 }
 </script>
