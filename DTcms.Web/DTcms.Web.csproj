@@ -589,13 +589,7 @@
     <Content Include="templates\main\gsearch.html" />
     <Content Include="templates\main\images\2013022711092714.jpg" />
     <Content Include="templates\main\images\2013022711120616.jpg" />
-    <Content Include="templates\main\images\2013113008295830.jpg" />
     <Content Include="templates\main\images\2014121511404722.jpg" />
-    <Content Include="templates\main\images\201503242049171.jpg" />
-    <Content Include="templates\main\images\2015070816121135.jpg" />
-    <Content Include="templates\main\images\2015070816152683.jpg" />
-    <Content Include="templates\main\images\2015070816184233.jpg" />
-    <Content Include="templates\main\images\201507221636128.jpg" />
     <Content Include="templates\main\images\ad.jpg" />
     <Content Include="templates\main\images\ad2014.jpg" />
     <Content Include="templates\main\images\avatar-bg.png" />
@@ -629,7 +623,6 @@
     <Content Include="templates\main\images\cart-arrow.gif" />
     <Content Include="templates\main\images\close.png" />
     <Content Include="templates\main\images\delivery.png" />
-    <Content Include="templates\main\images\head365326_201305020945_m.jpg" />
     <Content Include="templates\main\images\icon-tips.png" />
     <Content Include="templates\main\images\ico_01.png" />
     <Content Include="templates\main\images\ico_04.gif" />
@@ -687,9 +680,6 @@
     <Content Include="templates\main\images\search.png" />
     <Content Include="templates\main\images\slider.png" />
     <Content Include="templates\main\images\sprite.gif" />
-    <Content Include="templates\main\images\s_365326_multi_1405994669232.jpg" />
-    <Content Include="templates\main\images\s_365326_multi_1405994777974.jpg" />
-    <Content Include="templates\main\images\s_365326_multi_1405995069515.jpg" />
     <Content Include="templates\main\images\transparent.gif" />
     <Content Include="templates\main\images\user-avatar.png" />
     <Content Include="templates\main\images\user.png" />
