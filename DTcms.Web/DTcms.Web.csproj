@@ -1886,6 +1886,7 @@
     <Content Include="xmlconfig\alipaypc.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
     <None Include="templates\mobile\jqmobi\css\src\afui.less" />
     <None Include="templates\mobile\jqmobi\plugins\README.md" />
     <None Include="templates\mobile\jqmobi\ui\README.md" />

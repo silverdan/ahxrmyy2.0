@@ -105,7 +105,7 @@ namespace DTcms.Web.UI
             DataTable dt = new DataTable();
             if (!string.IsNullOrEmpty(channel_name))
             {
-                dt = new BLL.article().GetList(channel_name, category_id, page_size, page_index, strwhere, "sort_id asc,add_time desc", out totalcount).Tables[0];
+                dt = new BLL.article().GetList(channel_name, category_id, page_size, page_index, strwhere, "add_time desc,sort_id asc", out totalcount).Tables[0];
                 pagelist = Utils.OutPageList(page_size, page_index, totalcount, linkurl(_key, _params), 8);
             }
             else

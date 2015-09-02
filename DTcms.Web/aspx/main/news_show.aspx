@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/28 17:20:06.
-		本页面代码由DTcms模板引擎生成于 2015/8/28 17:20:06. 
+		This page was created by DTcms Template Engine at 2015/9/2 9:20:39.
+		本页面代码由DTcms模板引擎生成于 2015/9/2 9:20:39. 
 	*/
 
 	base.OnInit(e);
@@ -50,9 +50,7 @@ override protected void OnInit(EventArgs e)
 
 	templateBuilder.Append("<div class=\"header\">\r\n    <h1><a href=\"index.aspx\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/logo.jpg\" width=\"301\" height=\"62\" alt=\"安化县民医院官方网站\" title=\"安化县人民医院官方网站\" /></a></h1>\r\n    <h2>\r\n        <span class=\"sty_right\">\r\n        <!--<a href=\"Site_Map.aspx\">站点地图</a> |-->");
-	templateBuilder.Append(Utils.ObjectToStr(channel));
-	templateBuilder.Append("\r\n        <a href=\"javascript:void(0)\" onclick=\"addToFavorite()\">加入收藏</a> | \r\n        <a href=\"#\" target=\"_blank\">人事管理</a> |  \r\n        <a href=\"#\" target=\"_blank\">内部OA</a>  </span>\r\n    </h2>\r\n    <input type=\"text\" class=\"search\" name=\"tbSearch\" id=\"tbSearch\" value=\"\" onkeypress=\"if(event.keyCode==13){document.all.btnSearch.click();return false;}\" placeholder=\"输入回车搜索\" x-webkit-speech=\"\"  />\r\n    <input type=\"button\" class=\"btn_search\" name=\"btnSearch\" id=\"btnSearch\" value=\"搜 索\" onclick=\"SearchWords()\" />\r\n    <ul>\r\n\r\n    <li onclick=\"self.location='");
+	templateBuilder.Append("/images/logo.jpg\" width=\"301\" height=\"62\" alt=\"安化县民医院官方网站\" title=\"安化县人民医院官方网站\" /></a></h1>\r\n    <h2>\r\n        <span class=\"sty_right\">\r\n        <!--<a href=\"Site_Map.aspx\">站点地图</a> |-->\r\n        <a href=\"javascript:void(0)\" onclick=\"addToFavorite()\">加入收藏</a> | \r\n        <!--<a href=\"#\" target=\"_blank\">人事管理</a> |-->  \r\n        <a href=\"#\" target=\"_blank\">内部OA</a>  </span>\r\n    </h2>\r\n    <input type=\"text\" class=\"search\" name=\"tbSearch\" id=\"tbSearch\" value=\"\" onkeypress=\"if(event.keyCode==13){document.all.btnSearch.click();return false;}\" placeholder=\"输入回车搜索\" x-webkit-speech=\"\"  />\r\n    <input type=\"button\" class=\"btn_search\" name=\"btnSearch\" id=\"btnSearch\" value=\"搜 索\" onclick=\"SearchWords()\" />\r\n    <ul>\r\n\r\n    <li onclick=\"self.location='");
 	templateBuilder.Append(linkurl("index"));
 
 	templateBuilder.Append("'\" style=\"cursor:pointer;\"\r\n			");
@@ -310,30 +308,7 @@ override protected void OnInit(EventArgs e)
 
 	}	//end for if
 
-	templateBuilder.Append("\r\n    <!--用户评论-->\r\n    </div>\r\n    <div class=\"right news_right n_mx\">\r\n      <h5><img src=\"");
-	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/pic_024.jpg\" width=\"168\" height=\"71\" alt=\"图片描述\" title=\"图片描述\" /></h5>\r\n       <!--相关推荐-->\r\n      <div class=\"right_newsmx\">\r\n        <h6>相关推荐</h6>\r\n        <ul>\r\n        ");
-	DataTable relNews = get_article_list(channel, model.category_id, 4, "is_red=1 and img_url<>'' and id<>"+model.id);
-
-	foreach(DataRow dr in relNews.Rows)
-	{
-
-	templateBuilder.Append("\r\n        <li>\r\n          <div class=\"img-box\">\r\n            <a title=\"" + Utils.ObjectToStr(dr["title"]) + "\" href=\"");
-	templateBuilder.Append(linkurl("news_show",Utils.ObjectToStr(dr["id"])));
-
-	templateBuilder.Append("\">\r\n              <img src=\"" + Utils.ObjectToStr(dr["img_url"]) + "\" />\r\n            </a>\r\n          </div>\r\n          <div class=\"info\">\r\n            <h3><a title=\"" + Utils.ObjectToStr(dr["title"]) + "\" href=\"");
-	templateBuilder.Append(linkurl("news_show",Utils.ObjectToStr(dr["id"])));
-
-	templateBuilder.Append("\">" + Utils.ObjectToStr(dr["title"]) + "</a></h3>\r\n            <p>" + Utils.ObjectToStr(dr["zhaiyao"]) + "</p>\r\n            <span>" + Utils.ObjectToStr(dr["add_time"]) + "</span>\r\n          </div>\r\n        </li>\r\n        ");
-	}	//end for if
-
-	if (relNews.Rows.Count<1)
-	{
-
-	templateBuilder.Append("\r\n        <div class=\"nodata\">暂无相关的资讯...</div>\r\n        ");
-	}	//end for if
-
-	templateBuilder.Append("\r\n      </ul>\r\n      </div>\r\n    </div>\r\n  	</div> <!--/相关推荐-->\r\n\r\n  <!--content end-->\r\n        <div class=\"clear\"></div> \r\n        <!--Footer-->\r\n        ");
+	templateBuilder.Append("\r\n    <!--用户评论-->\r\n    </div>\r\n\r\n  	</div> <!--/相关推荐-->\r\n\r\n  <!--content end-->\r\n        <div class=\"clear\"></div> \r\n        <!--Footer-->\r\n        ");
 
 	templateBuilder.Append("<div class=\"footer\">\r\n    <div class=\"sy_newsp\">\r\n        <h3>人医院报</h3>\r\n        <select name=\"ddlYears\" id=\"ddlYears\" >\r\n            <option value=\"0\">请选择年份</option>\r\n            <option value=\"2015\">2015年</option>\r\n            <option value=\"2014\">2014年</option>\r\n        </select>\r\n        <select class=\"sty01\" name=\"ddlTimes\" id=\"ddlTimes\">\r\n            <option value=\"0\">选择期数</option>\r\n        </select>\r\n        <input class=\"sea_go\" name=\"btnGoNewsPaper\" id=\"btnGoNewsPaper\" onclick=\"GoNewsPaper()\" type=\"button\" />\r\n    </div>\r\n    <div class=\"sy_ysg\">\r\n        <dl>\r\n            <dt><a href=\"history.aspx\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");

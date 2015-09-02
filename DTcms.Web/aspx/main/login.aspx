@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/8/28 17:20:05.
-		本页面代码由DTcms模板引擎生成于 2015/8/28 17:20:05. 
+		This page was created by DTcms Template Engine at 2015/9/2 9:20:37.
+		本页面代码由DTcms模板引擎生成于 2015/9/2 9:20:37. 
 	*/
 
 	base.OnInit(e);
@@ -48,7 +48,7 @@ override protected void OnInit(EventArgs e)
 
 	templateBuilder.Append("<div class=\"header\">\r\n    <h1><a href=\"index.aspx\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/logo.jpg\" width=\"301\" height=\"62\" alt=\"安化县民医院官方网站\" title=\"安化县人民医院官方网站\" /></a></h1>\r\n    <h2>\r\n        <span class=\"sty_right\">\r\n        <!--<a href=\"Site_Map.aspx\">站点地图</a> |-->\r\n        <a href=\"javascript:void(0)\" onclick=\"addToFavorite()\">加入收藏</a> | \r\n        <a href=\"#\" target=\"_blank\">人事管理</a> |  \r\n        <a href=\"#\" target=\"_blank\">内部OA</a>  </span>\r\n    </h2>\r\n    <input type=\"text\" class=\"search\" name=\"tbSearch\" id=\"tbSearch\" value=\"\" onkeypress=\"if(event.keyCode==13){document.all.btnSearch.click();return false;}\" placeholder=\"输入回车搜索\" x-webkit-speech=\"\"  />\r\n    <input type=\"button\" class=\"btn_search\" name=\"btnSearch\" id=\"btnSearch\" value=\"搜 索\" onclick=\"SearchWords()\" />\r\n</div>");
+	templateBuilder.Append("/images/logo.jpg\" width=\"301\" height=\"62\" alt=\"安化县民医院官方网站\" title=\"安化县人民医院官方网站\" /></a></h1>\r\n    <h2>\r\n        <span class=\"sty_right\">\r\n        <!--<a href=\"Site_Map.aspx\">站点地图</a> |-->\r\n        <a href=\"javascript:void(0)\" onclick=\"addToFavorite()\">加入收藏</a> | \r\n        <!--<a href=\"#\" target=\"_blank\">人事管理</a> |-->  \r\n        <a href=\"#\" target=\"_blank\">内部OA</a>  </span>\r\n    </h2>\r\n    <input type=\"text\" class=\"search\" name=\"tbSearch\" id=\"tbSearch\" value=\"\" onkeypress=\"if(event.keyCode==13){document.all.btnSearch.click();return false;}\" placeholder=\"输入回车搜索\" x-webkit-speech=\"\"  />\r\n    <input type=\"button\" class=\"btn_search\" name=\"btnSearch\" id=\"btnSearch\" value=\"搜 索\" onclick=\"SearchWords()\" />\r\n</div>");
 
 
 	templateBuilder.Append("\r\n<!--/Header-->\r\n\r\n<div class=\"login-box\">\r\n	  \r\n  <div class=\"section clearfix\">\r\n  <!--页面左边-->\r\n  <div class=\"login-left\"></div>\r\n  <!--/页面左边-->\r\n  \r\n  <!--页面右边-->\r\n  <div class=\"login-right\">\r\n    <h1>会员登录</h1>\r\n    <form id=\"loginform\" name=\"loginform\" url=\"");
