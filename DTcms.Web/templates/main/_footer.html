@@ -1,7 +1,7 @@
 ﻿<div class="footer">
     <div class="sy_newsp">
-        <h3>人医院报</h3>
-        <select name="ddlYears" id="ddlYears" >
+        <h3>医院简报</h3>
+        <!--<select name="ddlYears" id="ddlYears" >
             <option value="0">请选择年份</option>
             <option value="2015">2015年</option>
             <option value="2014">2014年</option>
@@ -9,13 +9,13 @@
         <select class="sty01" name="ddlTimes" id="ddlTimes">
             <option value="0">选择期数</option>
         </select>
-        <input class="sea_go" name="btnGoNewsPaper" id="btnGoNewsPaper" onclick="GoNewsPaper()" type="button" />
+        <input class="sea_go" name="btnGoNewsPaper" id="btnGoNewsPaper" onclick="GoNewsPaper()" type="button" />-->
     </div>
     <div class="sy_ysg">
         <dl>
-            <dt><a href="history.aspx" target="_blank"><img src="<%templateskin%>/images/pic_ysg01.jpg" width="160" height="59" alt="院史馆" title="院史馆" /></a></dt>
+            <dt><a href="<%linkurl("about_show",148)%>" target="_blank"><img src="<%templateskin%>/images/pic_ysg01.jpg" width="160" height="59" alt="院史馆" title="院史馆" /></a></dt>
             <dd>
-                <a href="history.aspx">人医历史</a>
+                <a href="<%linkurl("about_show",148)%>">人医历史</a>
                 <p>Hospital Historical</p>
             </dd>
         </dl>
@@ -23,7 +23,7 @@
     <div class="sy_kslj">
         <ul>
             <li><a target="_blank" href="http://t.qq.com/ahrmyy"><img src="<%templateskin%>/images/pic_weiboa.jpg" width="67" height="61" alt="人医官方微博" title="人医官方微博" /><span>人医微博<br /><em>WeiBo</em></span></a></li>
-            <li><a target="_blank" href="#"><img src="<%templateskin%>/images/pic_tela.jpg" width="67" height="61" alt="电话咨询" title="电话咨询" /><span>电话咨询<br /><em>PhoneBook</em></span></a></li>
+            <li><a target="_blank" href="<%linkurl("treatment_show",159)%>"><img src="<%templateskin%>/images/pic_tela.jpg" width="67" height="61" alt="电话咨询" title="电话咨询" /><span>电话咨询<br /><em>PhoneBook</em></span></a></li>
             <li><a target="_blank" href="<%linkurl("video")%>"><img src="<%templateskin%>/images/pic_videoa.jpg" width="67" height="61" alt="视频" title="视频" /><span>视频<br /><em>Video</em></span></a></li>
             <li><a target="_blank" href="<%linkurl("donw")%>"><img src="<%templateskin%>/images/pic_downa.jpg" width="67" height="61" alt="资料下载" title="资料下载" /><span>资料下载<br /><em>DownLoad</em></span></a></li>
         </ul>

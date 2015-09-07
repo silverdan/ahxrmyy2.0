@@ -9,8 +9,8 @@ override protected void OnInit(EventArgs e)
 {
 
 	/* 
-		This page was created by DTcms Template Engine at 2015/9/2 9:20:37.
-		本页面代码由DTcms模板引擎生成于 2015/9/2 9:20:37. 
+		This page was created by DTcms Template Engine at 2015/9/7 13:16:33.
+		本页面代码由DTcms模板引擎生成于 2015/9/7 13:16:33. 
 	*/
 
 	base.OnInit(e);
@@ -175,17 +175,44 @@ override protected void OnInit(EventArgs e)
 
 	templateBuilder.Append("\r\n        <!--/Header-->\r\n\r\n        <div class=\"content\">\r\n            <div class=\"left\">\r\n            <!--快速导航-->\r\n        		");
 
-	templateBuilder.Append("<div class=\"q_nav\">\r\n                    <h3><span><a href=\"javascript:void(0)\" id=\"ShowNav\">简洁显示</a></span>快速导航</h3>\r\n                    <div id=\"NavSuccinctly\">\r\n                        <dl class=\"cont\">\r\n                            <dt><a href=\"visit_nav.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("<div class=\"q_nav\">\r\n                    <h3><span><a href=\"javascript:void(0)\" id=\"ShowNav\">简洁显示</a></span>快速导航</h3>\r\n                    <div id=\"NavSuccinctly\">\r\n                        <dl class=\"cont\">\r\n                            <dt><a href=\"");
+	templateBuilder.Append(linkurl("experts_list"));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_01.png\" width=\"44\" height=\"41\" alt=\"科室导航\" title=\"科室导航\" /></a></dt>\r\n                            <dd class=\"til\"><a href=\"visit_nav.aspx\" target=\"_blank\">科室导航</a></dd>\r\n                            <dd class=\"cont\">按医学分类，浏览其下辖科室详细内容；顶部模型图操作：移动鼠标至相应部位，系统自动罗列当前部位所涉及科室。</dd>\r\n                            <dd class=\"btn\"><a href=\"visit_nav.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_01.png\" width=\"44\" height=\"41\" alt=\"科室导航\" title=\"科室导航\" /></a></dt>\r\n                            <dd class=\"til\"><a href=\"");
+	templateBuilder.Append(linkurl("experts_list"));
+
+	templateBuilder.Append("\" target=\"_blank\">科室导航</a></dd>\r\n                            <dd class=\"cont\">按医学分类，浏览其下辖科室详细内容；顶部模型图操作：移动鼠标至相应部位，系统自动罗列当前部位所涉及科室。</dd>\r\n                            <dd class=\"btn\"><a href=\"");
+	templateBuilder.Append(linkurl("experts_list"));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/btn_01.jpg\" width=\"74\" height=\"23\" alt=\"查看更多\" title=\"查看更多\" /></a></dd>\r\n                        </dl>\r\n                        <dl>\r\n                            <dt><a href=\"time.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/btn_01.jpg\" width=\"74\" height=\"23\" alt=\"查看更多\" title=\"查看更多\" /></a></dd>\r\n                        </dl>\r\n                        <dl>\r\n                            <dt><a href=\"");
+	templateBuilder.Append(linkurl("treatment_show",156));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav004.png\" width=\"42\" height=\"42\" alt=\"出诊安排\" title=\"出诊安排\" /></a></dt>\r\n                            <dd class=\"til\"><a href=\"time.aspx\" target=\"_blank\">出诊安排</a></dd>\r\n                            <dd class=\"cont\">对五天工作日内值班情况做精确显示，周末值班信息仅供参考。</dd>\r\n                            <dd class=\"btn\"><a href=\"time.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav004.png\" width=\"42\" height=\"42\" alt=\"出诊安排\" title=\"出诊安排\" /></a></dt>\r\n                            <dd class=\"til\"><a href=\"");
+	templateBuilder.Append(linkurl("treatment_show",156));
+
+	templateBuilder.Append("\" target=\"_blank\">出诊安排</a></dd>\r\n                            <dd class=\"cont\">对五天工作日内值班情况做精确显示，周末值班信息仅供参考。</dd>\r\n                            <dd class=\"btn\"><a href=\"");
+	templateBuilder.Append(linkurl("treatment_show",156));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/btn_01.jpg\" width=\"74\" height=\"23\" alt=\"查看更多\" title=\"查看更多\" /></a></dd>\r\n                        </dl>\r\n                        <dl style=\"border-bottom:none;\">\r\n                            <dt><a href=\"infor_retrieval.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/btn_01.jpg\" width=\"74\" height=\"23\" alt=\"查看更多\" title=\"查看更多\" /></a></dd>\r\n                        </dl>\r\n                        <dl style=\"border-bottom:none;\">\r\n                            <dt><a href=\"");
+	templateBuilder.Append(linkurl("search"));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav008.png\" width=\"42\" height=\"42\" alt=\"信息查询\" title=\"信息查询\" /></a></dt>\r\n                            <dd class=\"til\"><a href=\"infor_retrieval.aspx\" target=\"_blank\">信息查询</a></dd>\r\n                            <dd class=\"cont\">按查询词条首位字母快速索引相关查询结果，同时支持关键字模糊查询。</dd>\r\n                            <dd class=\"btn\"><a href=\"infor_retrieval.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav008.png\" width=\"42\" height=\"42\" alt=\"信息查询\" title=\"信息查询\" /></a></dt>\r\n                            <dd class=\"til\"><a href=\"");
+	templateBuilder.Append(linkurl("search"));
+
+	templateBuilder.Append("\" target=\"_blank\">信息查询</a></dd>\r\n                            <dd class=\"cont\">按查询词条首位字母快速索引相关查询结果，同时支持关键字模糊查询。</dd>\r\n                            <dd class=\"btn\"><a href=\"");
+	templateBuilder.Append(linkurl("search"));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/btn_01.jpg\" width=\"74\" height=\"23\" alt=\"查看更多\" title=\"查看更多\" /></a></dd>\r\n                        </dl>\r\n                    </div>\r\n                    <div class=\"quick_nav\">\r\n                        <ul>\r\n                            <li><a href=\"");
 	templateBuilder.Append(linkurl("treatment_list",52));
@@ -201,11 +228,17 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav002b.png\" width=\"54\" height=\"54\" alt=\"科室导航\" title=\"科室导航\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav002.png\" width=\"54\" height=\"54\" alt=\"科室导航\" title=\"科室导航\" /><p>科室导航</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav002.png\" width=\"54\" height=\"54\" alt=\"科室导航\" title=\"科室导航\" /><p>科室导航</p></a></li>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("treatment_show",158));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav003b.png\" width=\"54\" height=\"54\" alt=\"人医地图\" title=\"人医地图\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav003.png\" width=\"54\" height=\"54\" alt=\"人医地图\" title=\"人医地图\" /><p>人医地图</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav003.png\" width=\"54\" height=\"54\" alt=\"人医地图\" title=\"人医地图\" /><p>人医地图</p></a></li>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("treatment_show",156));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav004b.png\" width=\"54\" height=\"54\" alt=\"出诊安排\" title=\"出诊安排\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
@@ -213,11 +246,17 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav005b.png\" width=\"54\" height=\"54\" alt=\"预约挂号\" title=\"预约挂号\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav005.png\" width=\"54\" height=\"54\" alt=\"预约挂号\" title=\"预约挂号\" /><p>预约挂号</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav005.png\" width=\"54\" height=\"54\" alt=\"预约挂号\" title=\"预约挂号\" /><p>预约挂号</p></a></li>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("treatment_show",157));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav006b.png\" width=\"54\" height=\"54\" alt=\"来院路线\" title=\"来院路线\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/ico_nav006.png\" width=\"54\" height=\"54\" alt=\"来院路线\" title=\"来院路线\" /><p>来院路线</p></a></li>\r\n                            <li><a href=\"#\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("/images/ico_nav006.png\" width=\"54\" height=\"54\" alt=\"来院路线\" title=\"来院路线\" /><p>来院路线</p></a></li>\r\n                            <li><a href=\"");
+	templateBuilder.Append(linkurl("treatment_show",159));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/ico_nav007b.png\" width=\"54\" height=\"54\" alt=\"电话查询\" title=\"电话查询\" /><img class=\"NavNone\" src=\"");
 	templateBuilder.Append("/templates/main");
@@ -284,7 +323,10 @@ override protected void OnInit(EventArgs e)
 
 	templateBuilder.Append("\r\n                    </div>\r\n                    <div id=\"loader\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/loading.gif\" width=\"16px\" height=\"16px\" /></div>\r\n                </div>\r\n                <div>\r\n                    <!--选项卡 begin-->\r\n                    <div class=\"bd\" id=\"n1Tab\">\r\n                        <div class=\"Tabtitle\">\r\n                            <h3 class=\"nTabs active\"><a href=\"news.aspx\" target=\"_blank\">人医快讯<em>Hospital News</em></a></h3>\r\n                            <h3 class=\"nTabs\"><a href=\"Notice.aspx\" target=\"_blank\">最新公告<em>Bulletin</em></a></h3>\r\n                            <h3 class=\"nTabs\">官方微博<em>WeiBo</em></h3>\r\n                        </div>\r\n                        <div class=\"TabContent\">\r\n                        	<!--快讯公告-->\r\n                            <div id=\"n1Tab_Content0\" class=\"n1Tab_Content\">\r\n                            	");
+	templateBuilder.Append("/images/loading.gif\" width=\"16px\" height=\"16px\" /></div>\r\n                </div>\r\n                <div>\r\n                    <!--选项卡 begin-->\r\n                    <div class=\"bd\" id=\"n1Tab\">\r\n                        <div class=\"Tabtitle\">\r\n                            <h3 class=\"nTabs active\"><a href=\"news.aspx\" target=\"_blank\">人医快讯<em>Hospital News</em></a></h3>\r\n                            <h3 class=\"nTabs\"><a href=\"");
+	templateBuilder.Append(linkurl("news_list",67));
+
+	templateBuilder.Append("\" target=\"_blank\">最新公告<em>Bulletin</em></a></h3>\r\n                            <h3 class=\"nTabs\">官方微博<em>WeiBo</em></h3>\r\n                        </div>\r\n                        <div class=\"TabContent\">\r\n                        	<!--快讯公告-->\r\n                            <div id=\"n1Tab_Content0\" class=\"n1Tab_Content\">\r\n                            	");
 	DataTable focusNews = get_article_list("news", 0, 1, "status=0 and is_slide=1 and img_url<>''");
 
 	foreach(DataRow dr in focusNews.Rows)
@@ -351,11 +393,20 @@ override protected void OnInit(EventArgs e)
 	templateBuilder.Append("/js/index.js\"></");
 	templateBuilder.Append("script>\r\n        <!--Footer-->\r\n        ");
 
-	templateBuilder.Append("<div class=\"footer\">\r\n    <div class=\"sy_newsp\">\r\n        <h3>人医院报</h3>\r\n        <select name=\"ddlYears\" id=\"ddlYears\" >\r\n            <option value=\"0\">请选择年份</option>\r\n            <option value=\"2015\">2015年</option>\r\n            <option value=\"2014\">2014年</option>\r\n        </select>\r\n        <select class=\"sty01\" name=\"ddlTimes\" id=\"ddlTimes\">\r\n            <option value=\"0\">选择期数</option>\r\n        </select>\r\n        <input class=\"sea_go\" name=\"btnGoNewsPaper\" id=\"btnGoNewsPaper\" onclick=\"GoNewsPaper()\" type=\"button\" />\r\n    </div>\r\n    <div class=\"sy_ysg\">\r\n        <dl>\r\n            <dt><a href=\"history.aspx\" target=\"_blank\"><img src=\"");
+	templateBuilder.Append("<div class=\"footer\">\r\n    <div class=\"sy_newsp\">\r\n        <h3>医院简报</h3>\r\n        <!--<select name=\"ddlYears\" id=\"ddlYears\" >\r\n            <option value=\"0\">请选择年份</option>\r\n            <option value=\"2015\">2015年</option>\r\n            <option value=\"2014\">2014年</option>\r\n        </select>\r\n        <select class=\"sty01\" name=\"ddlTimes\" id=\"ddlTimes\">\r\n            <option value=\"0\">选择期数</option>\r\n        </select>\r\n        <input class=\"sea_go\" name=\"btnGoNewsPaper\" id=\"btnGoNewsPaper\" onclick=\"GoNewsPaper()\" type=\"button\" />-->\r\n    </div>\r\n    <div class=\"sy_ysg\">\r\n        <dl>\r\n            <dt><a href=\"");
+	templateBuilder.Append(linkurl("about_show",148));
+
+	templateBuilder.Append("\" target=\"_blank\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/pic_ysg01.jpg\" width=\"160\" height=\"59\" alt=\"院史馆\" title=\"院史馆\" /></a></dt>\r\n            <dd>\r\n                <a href=\"history.aspx\">人医历史</a>\r\n                <p>Hospital Historical</p>\r\n            </dd>\r\n        </dl>\r\n    </div>\r\n    <div class=\"sy_kslj\">\r\n        <ul>\r\n            <li><a target=\"_blank\" href=\"http://t.qq.com/ahrmyy\"><img src=\"");
+	templateBuilder.Append("/images/pic_ysg01.jpg\" width=\"160\" height=\"59\" alt=\"院史馆\" title=\"院史馆\" /></a></dt>\r\n            <dd>\r\n                <a href=\"");
+	templateBuilder.Append(linkurl("about_show",148));
+
+	templateBuilder.Append("\">人医历史</a>\r\n                <p>Hospital Historical</p>\r\n            </dd>\r\n        </dl>\r\n    </div>\r\n    <div class=\"sy_kslj\">\r\n        <ul>\r\n            <li><a target=\"_blank\" href=\"http://t.qq.com/ahrmyy\"><img src=\"");
 	templateBuilder.Append("/templates/main");
-	templateBuilder.Append("/images/pic_weiboa.jpg\" width=\"67\" height=\"61\" alt=\"人医官方微博\" title=\"人医官方微博\" /><span>人医微博<br /><em>WeiBo</em></span></a></li>\r\n            <li><a target=\"_blank\" href=\"#\"><img src=\"");
+	templateBuilder.Append("/images/pic_weiboa.jpg\" width=\"67\" height=\"61\" alt=\"人医官方微博\" title=\"人医官方微博\" /><span>人医微博<br /><em>WeiBo</em></span></a></li>\r\n            <li><a target=\"_blank\" href=\"");
+	templateBuilder.Append(linkurl("treatment_show",159));
+
+	templateBuilder.Append("\"><img src=\"");
 	templateBuilder.Append("/templates/main");
 	templateBuilder.Append("/images/pic_tela.jpg\" width=\"67\" height=\"61\" alt=\"电话咨询\" title=\"电话咨询\" /><span>电话咨询<br /><em>PhoneBook</em></span></a></li>\r\n            <li><a target=\"_blank\" href=\"");
 	templateBuilder.Append(linkurl("video"));

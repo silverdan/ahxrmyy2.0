@@ -3,22 +3,29 @@
     <ul class="navbar">
     <%set DataTable categoryList1=get_category_child_list(channel, 0)%>
     <%foreach(DataRow cdr1 in categoryList1.Rows)%>
-    <%if({strtoint({cdr1[id]})}=={category_id})%>
+     <%set string pagename="_list"%>
+     <%set string pageids={cdr1[id]}%>
+        <%if({cdr1[link_url]}!={""})%>
+        <%set pagename="_show"%>
+        <%set pageids={cdr1[link_url]}%>
+        <%/if%>
+    	<%if({strtoint({cdr1[id]})}=={category_id})%>
         <li class="on">
         <%else%>
         <li> 
         <%/if%>
-	        <h4><a href="<%linkurl({channel+"_list"},{cdr1[id]})%>">{cdr1[title]}</a></h4>
-	        <p>
+	        <h4><a href="<%linkurl({channel+pagename},pageids)%>">{cdr1[title]}</a></h4>
+	        <!--<p>
         <%set DataTable categoryList2=get_category_child_list(channel, {strtoint({cdr1[id]})})%>
         <%foreach(DataRow cdr2 in categoryList2.Rows)%>
+       
         <%if({strtoint({cdr2[id]})}=={category_id})%>
         	<a href="<%linkurl({channel+"_list"},{cdr2[id]})%>" class="selected">{cdr2[title]}</a>
         <%else%>
         	<a href="<%linkurl({channel+"_list"},{cdr2[id]})%>">{cdr2[title]}</a>
         <%/if%>
         <%/foreach%>
-        </p>
+        </p>-->
         </li>
     <%/foreach%>
     </ul>

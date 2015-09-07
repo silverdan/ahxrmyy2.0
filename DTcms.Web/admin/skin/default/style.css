@@ -268,7 +268,7 @@ textarea.input{ width:300px; height:65px; }
 	.imglist ul li .details .check{ position:absolute; top:0px; right:0px; padding:5px; border-left:1px solid #eee; border-bottom:1px solid #eee; background:#fff; }
 	.imglist ul li .details .absbg{ position:absolute; left:0px; top:95px; width:100%; height:70px; background:#000; filter:alpha(opacity=20); opacity:0.2; }
 	.imglist ul li .details .pic{ width:100%; height:165px; overflow:hidden; }
-		.imglist ul li .details .pic img{ min-width:100%; min-height:100%; cursor:pointer; }
+		.imglist ul li .details .pic img{ max-width:295px; max-height:165px; cursor:pointer; }
 	.imglist ul li .details h1{ position:absolute; display:block; padding:10px 20px; left:0px; top:95px; right:0; height:50px; border-bottom:1px solid #eee; }
 		.imglist ul li .details h1 span{ display:block; color:#fff; font-size:14px; font-weight:bold; height:50px; line-height:25px; text-overflow:ellipsis; overflow:hidden; }
 		.imglist ul li .details h1 span a{ color:#fff; text-decoration:none; }

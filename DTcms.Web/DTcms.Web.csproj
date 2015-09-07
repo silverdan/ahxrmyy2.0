@@ -208,6 +208,8 @@
     <Content Include="api\payment\tenpaypc\notify_url.aspx" />
     <Content Include="api\payment\tenpaypc\return_url.aspx" />
     <Content Include="api\weixin\wx.aspx" />
+    <Content Include="aspx\main\about_list.aspx" />
+    <Content Include="aspx\main\about_show.aspx" />
     <Content Include="aspx\main\cart.aspx" />
     <Content Include="aspx\main\content.aspx" />
     <Content Include="aspx\main\down.aspx" />
@@ -216,6 +218,7 @@
     <Content Include="aspx\main\error.aspx" />
     <Content Include="aspx\main\experts_list.aspx" />
     <Content Include="aspx\main\experts_show.aspx" />
+    <Content Include="aspx\main\feedback.aspx" />
     <Content Include="aspx\main\goods.aspx" />
     <Content Include="aspx\main\goods_list.aspx" />
     <Content Include="aspx\main\goods_show.aspx" />
@@ -583,6 +586,8 @@
     <Content Include="templates\main\down_list.html" />
     <Content Include="templates\main\down_show.html" />
     <Content Include="templates\main\error.html" />
+    <Content Include="templates\main\experts_list.html" />
+    <Content Include="templates\main\experts_list2.html" />
     <Content Include="templates\main\goods.html" />
     <Content Include="templates\main\goods_list.html" />
     <Content Include="templates\main\goods_show.html" />
